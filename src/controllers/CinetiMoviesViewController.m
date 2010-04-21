@@ -1,19 +1,18 @@
 //
-//  FirstViewController.m
-//  cineti.ca-iphone
+//  CinetiMoviesViewController.m
+//  Cineti
 //
 //  Created by Peter Zion on 10-04-21.
-//  Copyright __MyCompanyName__ 2010. All rights reserved.
+//  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "CinetiMoviesViewController.h"
 
 
-@implementation FirstViewController
-
+@implementation CinetiMoviesViewController
 
 /*
-// The designated initializer. Override to perform setup that is required before the view is loaded.
+ // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
@@ -59,5 +58,6 @@
 - (void)dealloc {
     [super dealloc];
 }
+
 
 @end
