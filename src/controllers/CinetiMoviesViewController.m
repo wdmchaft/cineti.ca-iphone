@@ -7,6 +7,7 @@
 //
 
 #import "CinetiMoviesViewController.h"
+#import "CinetiMoviesRequest.h"
 
 
 @implementation CinetiMoviesViewController
@@ -21,18 +22,12 @@
 }
 */
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[[CinetiMoviesRequest moviesRequestWithDelegate:self] retain];
 }
-*/
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -57,6 +52,18 @@
 
 - (void)dealloc {
     [super dealloc];
+}
+
+
+- (void)moviesRequest:(CinetiMoviesRequest *)request didSucceedWithMovies:(NSArray *)movies {
+	NSLog( @"Successfully retrieved %d movies", [movies count] );
+	[request autorelease];
+}
+
+
+- (void)moviesRequest:(CinetiMoviesRequest *)request didFailWithError:(NSError *)error {
+	NSLog( @"Failed to retrieve movies" );
+	[request autorelease];
 }
 
 

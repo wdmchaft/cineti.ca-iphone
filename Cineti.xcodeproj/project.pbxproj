@@ -380,6 +380,12 @@
 		DB4393001180A036008D4114 /* UIViewControllerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DB4392381180A036008D4114 /* UIViewControllerAdditions.h */; };
 		DB4393011180A036008D4114 /* UIWebViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DB4392391180A036008D4114 /* UIWebViewAdditions.h */; };
 		DB4393021180A036008D4114 /* UIWindowAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DB43923A1180A036008D4114 /* UIWindowAdditions.h */; };
+		DB4393071180A0E3008D4114 /* CinetiMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4393061180A0E3008D4114 /* CinetiMovie.m */; };
+		DB43930A1180A23D008D4114 /* CinetiJSONObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4393091180A23D008D4114 /* CinetiJSONObject.m */; };
+		DB4393141180A670008D4114 /* CinetiMoviesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4393131180A670008D4114 /* CinetiMoviesRequest.m */; };
+		DB43933D1180AFBE008D4114 /* libthree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43901C11809FBF008D4114 /* libthree20.a */; };
+		DB4393411180B018008D4114 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4393401180B018008D4114 /* QuartzCore.framework */; };
+		DB4393671180B0A8008D4114 /* CinetiJSONRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4393661180B0A8008D4114 /* CinetiJSONRequest.m */; };
 		DBF7D71C117F5AAD002B0C96 /* CinetiMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF7D719117F5AAD002B0C96 /* CinetiMainWindow.xib */; };
 		DBF7D71D117F5AAD002B0C96 /* CinetiTheatresView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF7D71A117F5AAD002B0C96 /* CinetiTheatresView.xib */; };
 		DBF7D75D117F8908002B0C96 /* CinetiMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D75C117F8908002B0C96 /* CinetiMoviesViewController.m */; };
@@ -426,7 +432,7 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DB43901C11809FBF008D4114 /* libthree20.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libthree20.a; path = "build/Debug-iphonesimulator/libthree20.a"; sourceTree = "<group>"; };
+		DB43901C11809FBF008D4114 /* libthree20.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libthree20.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4390231180A01B008D4114 /* NSArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSArrayAdditions.m; path = "third-party/three20/src/NSArrayAdditions.m"; sourceTree = "<group>"; };
 		DB4390241180A01B008D4114 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDataAdditions.m; path = "third-party/three20/src/NSDataAdditions.m"; sourceTree = "<group>"; };
 		DB4390251180A01B008D4114 /* NSDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDateAdditions.m; path = "third-party/three20/src/NSDateAdditions.m"; sourceTree = "<group>"; };
@@ -795,6 +801,17 @@
 		DB4392381180A036008D4114 /* UIViewControllerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIViewControllerAdditions.h; path = "third-party/three20/src/Three20/UIViewControllerAdditions.h"; sourceTree = "<group>"; };
 		DB4392391180A036008D4114 /* UIWebViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIWebViewAdditions.h; path = "third-party/three20/src/Three20/UIWebViewAdditions.h"; sourceTree = "<group>"; };
 		DB43923A1180A036008D4114 /* UIWindowAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIWindowAdditions.h; path = "third-party/three20/src/Three20/UIWindowAdditions.h"; sourceTree = "<group>"; };
+		DB4393051180A0E3008D4114 /* CinetiMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiMovie.h; sourceTree = "<group>"; };
+		DB4393061180A0E3008D4114 /* CinetiMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiMovie.m; sourceTree = "<group>"; };
+		DB4393081180A23D008D4114 /* CinetiJSONObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiJSONObject.h; sourceTree = "<group>"; };
+		DB4393091180A23D008D4114 /* CinetiJSONObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiJSONObject.m; sourceTree = "<group>"; };
+		DB43930F1180A5B1008D4114 /* CinetiMoviesRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiMoviesRequestDelegate.h; sourceTree = "<group>"; };
+		DB4393121180A670008D4114 /* CinetiMoviesRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiMoviesRequest.h; sourceTree = "<group>"; };
+		DB4393131180A670008D4114 /* CinetiMoviesRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiMoviesRequest.m; sourceTree = "<group>"; };
+		DB4393401180B018008D4114 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DB4393651180B0A8008D4114 /* CinetiJSONRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiJSONRequest.h; sourceTree = "<group>"; };
+		DB4393661180B0A8008D4114 /* CinetiJSONRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiJSONRequest.m; sourceTree = "<group>"; };
+		DB4393681180B1AE008D4114 /* CinetiJSONRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiJSONRequestDelegate.h; sourceTree = "<group>"; };
 		DBF7D719117F5AAD002B0C96 /* CinetiMainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CinetiMainWindow.xib; sourceTree = "<group>"; };
 		DBF7D71A117F5AAD002B0C96 /* CinetiTheatresView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CinetiTheatresView.xib; sourceTree = "<group>"; };
 		DBF7D71E117F5B13002B0C96 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -829,6 +846,8 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
 				DBF7D95E117FA4D9002B0C96 /* libjson-framework.a in Frameworks */,
+				DB43933D1180AFBE008D4114 /* libthree20.a in Frameworks */,
+				DB4393411180B018008D4114 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -902,6 +921,7 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765070DF74369002DB57D /* CoreGraphics.framework */,
+				DB4393401180B018008D4114 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1284,6 +1304,16 @@
 		DBF7D6F7117F582B002B0C96 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DB4393081180A23D008D4114 /* CinetiJSONObject.h */,
+				DB4393091180A23D008D4114 /* CinetiJSONObject.m */,
+				DB4393681180B1AE008D4114 /* CinetiJSONRequestDelegate.h */,
+				DB4393651180B0A8008D4114 /* CinetiJSONRequest.h */,
+				DB4393661180B0A8008D4114 /* CinetiJSONRequest.m */,
+				DB43930F1180A5B1008D4114 /* CinetiMoviesRequestDelegate.h */,
+				DB4393121180A670008D4114 /* CinetiMoviesRequest.h */,
+				DB4393131180A670008D4114 /* CinetiMoviesRequest.m */,
+				DB4393051180A0E3008D4114 /* CinetiMovie.h */,
+				DB4393061180A0E3008D4114 /* CinetiMovie.m */,
 			);
 			name = Models;
 			path = src/models;
@@ -1669,6 +1699,10 @@
 				1D3623260D0F684500981E51 /* CinetiAppDelegate.m in Sources */,
 				DBF7D75D117F8908002B0C96 /* CinetiMoviesViewController.m in Sources */,
 				DBF7D78F117F8BDA002B0C96 /* CinetiTheatresViewController.m in Sources */,
+				DB4393071180A0E3008D4114 /* CinetiMovie.m in Sources */,
+				DB43930A1180A23D008D4114 /* CinetiJSONObject.m in Sources */,
+				DB4393141180A670008D4114 /* CinetiMoviesRequest.m in Sources */,
+				DB4393671180B0A8008D4114 /* CinetiJSONRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1885,6 +1919,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
+				HEADER_SEARCH_PATHS = "third-party/three20/src";
 				INFOPLIST_FILE = rsrc/Info.plist;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1902,6 +1937,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
+				HEADER_SEARCH_PATHS = "third-party/three20/src";
 				INFOPLIST_FILE = rsrc/Info.plist;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

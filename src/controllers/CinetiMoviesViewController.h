@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CinetiMoviesRequestDelegate.h"
 
 
-@interface CinetiMoviesViewController : UIViewController {
+@interface CinetiMoviesViewController : UIViewController <CinetiMoviesRequestDelegate> {
 
 }
 
