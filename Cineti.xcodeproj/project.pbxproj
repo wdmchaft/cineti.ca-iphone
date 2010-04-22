@@ -17,7 +17,31 @@
 		DBF7D75D117F8908002B0C96 /* CinetiMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D75C117F8908002B0C96 /* CinetiMoviesViewController.m */; };
 		DBF7D75F117F894E002B0C96 /* CinetiMoviesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF7D75E117F894E002B0C96 /* CinetiMoviesView.xib */; };
 		DBF7D78F117F8BDA002B0C96 /* CinetiTheatresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D78E117F8BDA002B0C96 /* CinetiTheatresViewController.m */; };
+		DBF7D947117FA42C002B0C96 /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF7D93A117FA42C002B0C96 /* JSON.h */; };
+		DBF7D948117FA42C002B0C96 /* NSObject+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF7D93B117FA42C002B0C96 /* NSObject+SBJSON.h */; };
+		DBF7D949117FA42C002B0C96 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D93C117FA42C002B0C96 /* NSObject+SBJSON.m */; };
+		DBF7D94A117FA42C002B0C96 /* NSString+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF7D93D117FA42C002B0C96 /* NSString+SBJSON.h */; };
+		DBF7D94B117FA42C002B0C96 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D93E117FA42C002B0C96 /* NSString+SBJSON.m */; };
+		DBF7D94C117FA42C002B0C96 /* SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF7D93F117FA42C002B0C96 /* SBJSON.h */; };
+		DBF7D94D117FA42C002B0C96 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D940117FA42C002B0C96 /* SBJSON.m */; };
+		DBF7D94E117FA42C002B0C96 /* SBJsonBase.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF7D941117FA42C002B0C96 /* SBJsonBase.h */; };
+		DBF7D94F117FA42C002B0C96 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D942117FA42C002B0C96 /* SBJsonBase.m */; };
+		DBF7D950117FA42C002B0C96 /* SBJsonParser.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF7D943117FA42C002B0C96 /* SBJsonParser.h */; };
+		DBF7D951117FA42C002B0C96 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D944117FA42C002B0C96 /* SBJsonParser.m */; };
+		DBF7D952117FA42C002B0C96 /* SBJsonWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF7D945117FA42C002B0C96 /* SBJsonWriter.h */; };
+		DBF7D953117FA42C002B0C96 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D946117FA42C002B0C96 /* SBJsonWriter.m */; };
+		DBF7D95E117FA4D9002B0C96 /* libjson-framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF7D855117FA276002B0C96 /* libjson-framework.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DBF7D954117FA44A002B0C96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBF7D854117FA276002B0C96 /* json-framework */;
+			remoteInfo = "json-framework";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -36,6 +60,20 @@
 		DBF7D75E117F894E002B0C96 /* CinetiMoviesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CinetiMoviesView.xib; sourceTree = "<group>"; };
 		DBF7D78D117F8BDA002B0C96 /* CinetiTheatresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiTheatresViewController.h; sourceTree = "<group>"; };
 		DBF7D78E117F8BDA002B0C96 /* CinetiTheatresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiTheatresViewController.m; sourceTree = "<group>"; };
+		DBF7D855117FA276002B0C96 /* libjson-framework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libjson-framework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBF7D93A117FA42C002B0C96 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = "third-party/json-framework-2.2.3/Source/JSON.h"; sourceTree = "<group>"; };
+		DBF7D93B117FA42C002B0C96 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SBJSON.h"; path = "third-party/json-framework-2.2.3/Source/NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		DBF7D93C117FA42C002B0C96 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SBJSON.m"; path = "third-party/json-framework-2.2.3/Source/NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		DBF7D93D117FA42C002B0C96 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+SBJSON.h"; path = "third-party/json-framework-2.2.3/Source/NSString+SBJSON.h"; sourceTree = "<group>"; };
+		DBF7D93E117FA42C002B0C96 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+SBJSON.m"; path = "third-party/json-framework-2.2.3/Source/NSString+SBJSON.m"; sourceTree = "<group>"; };
+		DBF7D93F117FA42C002B0C96 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJSON.h; path = "third-party/json-framework-2.2.3/Source/SBJSON.h"; sourceTree = "<group>"; };
+		DBF7D940117FA42C002B0C96 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJSON.m; path = "third-party/json-framework-2.2.3/Source/SBJSON.m"; sourceTree = "<group>"; };
+		DBF7D941117FA42C002B0C96 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonBase.h; path = "third-party/json-framework-2.2.3/Source/SBJsonBase.h"; sourceTree = "<group>"; };
+		DBF7D942117FA42C002B0C96 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonBase.m; path = "third-party/json-framework-2.2.3/Source/SBJsonBase.m"; sourceTree = "<group>"; };
+		DBF7D943117FA42C002B0C96 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonParser.h; path = "third-party/json-framework-2.2.3/Source/SBJsonParser.h"; sourceTree = "<group>"; };
+		DBF7D944117FA42C002B0C96 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonParser.m; path = "third-party/json-framework-2.2.3/Source/SBJsonParser.m"; sourceTree = "<group>"; };
+		DBF7D945117FA42C002B0C96 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = "third-party/json-framework-2.2.3/Source/SBJsonWriter.h"; sourceTree = "<group>"; };
+		DBF7D946117FA42C002B0C96 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = "third-party/json-framework-2.2.3/Source/SBJsonWriter.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +84,14 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
+				DBF7D95E117FA4D9002B0C96 /* libjson-framework.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBF7D853117FA276002B0C96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* cineti.ca-iphone.app */,
+				DBF7D855117FA276002B0C96 /* libjson-framework.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +118,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				DBF7D6FA117F586D002B0C96 /* Other */,
+				DBF7D7A0117FA20D002B0C96 /* Third Party */,
 			);
 			name = "cineti.ca-iphone";
 			sourceTree = "<group>";
@@ -144,7 +192,52 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
+		DBF7D7A0117FA20D002B0C96 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				DBF7D939117FA3FA002B0C96 /* json-framework */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		DBF7D939117FA3FA002B0C96 /* json-framework */ = {
+			isa = PBXGroup;
+			children = (
+				DBF7D93A117FA42C002B0C96 /* JSON.h */,
+				DBF7D93B117FA42C002B0C96 /* NSObject+SBJSON.h */,
+				DBF7D93C117FA42C002B0C96 /* NSObject+SBJSON.m */,
+				DBF7D93D117FA42C002B0C96 /* NSString+SBJSON.h */,
+				DBF7D93E117FA42C002B0C96 /* NSString+SBJSON.m */,
+				DBF7D93F117FA42C002B0C96 /* SBJSON.h */,
+				DBF7D940117FA42C002B0C96 /* SBJSON.m */,
+				DBF7D941117FA42C002B0C96 /* SBJsonBase.h */,
+				DBF7D942117FA42C002B0C96 /* SBJsonBase.m */,
+				DBF7D943117FA42C002B0C96 /* SBJsonParser.h */,
+				DBF7D944117FA42C002B0C96 /* SBJsonParser.m */,
+				DBF7D945117FA42C002B0C96 /* SBJsonWriter.h */,
+				DBF7D946117FA42C002B0C96 /* SBJsonWriter.m */,
+			);
+			name = "json-framework";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DBF7D851117FA276002B0C96 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBF7D947117FA42C002B0C96 /* JSON.h in Headers */,
+				DBF7D948117FA42C002B0C96 /* NSObject+SBJSON.h in Headers */,
+				DBF7D94A117FA42C002B0C96 /* NSString+SBJSON.h in Headers */,
+				DBF7D94C117FA42C002B0C96 /* SBJSON.h in Headers */,
+				DBF7D94E117FA42C002B0C96 /* SBJsonBase.h in Headers */,
+				DBF7D950117FA42C002B0C96 /* SBJsonParser.h in Headers */,
+				DBF7D952117FA42C002B0C96 /* SBJsonWriter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1D6058900D05DD3D006BFB54 /* cineti.ca-iphone */ = {
@@ -158,11 +251,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				DBF7D955117FA44A002B0C96 /* PBXTargetDependency */,
 			);
 			name = "cineti.ca-iphone";
 			productName = "cineti.ca-iphone";
 			productReference = 1D6058910D05DD3D006BFB54 /* cineti.ca-iphone.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DBF7D854117FA276002B0C96 /* json-framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBF7D85A117FA292002B0C96 /* Build configuration list for PBXNativeTarget "json-framework" */;
+			buildPhases = (
+				DBF7D851117FA276002B0C96 /* Headers */,
+				DBF7D852117FA276002B0C96 /* Sources */,
+				DBF7D853117FA276002B0C96 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "json-framework";
+			productName = "json-framework";
+			productReference = DBF7D855117FA276002B0C96 /* libjson-framework.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -177,6 +288,7 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* cineti.ca-iphone */,
+				DBF7D854117FA276002B0C96 /* json-framework */,
 			);
 		};
 /* End PBXProject section */
@@ -206,7 +318,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBF7D852117FA276002B0C96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBF7D949117FA42C002B0C96 /* NSObject+SBJSON.m in Sources */,
+				DBF7D94B117FA42C002B0C96 /* NSString+SBJSON.m in Sources */,
+				DBF7D94D117FA42C002B0C96 /* SBJSON.m in Sources */,
+				DBF7D94F117FA42C002B0C96 /* SBJsonBase.m in Sources */,
+				DBF7D951117FA42C002B0C96 /* SBJsonParser.m in Sources */,
+				DBF7D953117FA42C002B0C96 /* SBJsonWriter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBF7D955117FA44A002B0C96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBF7D854117FA276002B0C96 /* json-framework */;
+			targetProxy = DBF7D954117FA44A002B0C96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
@@ -219,6 +352,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
 				INFOPLIST_FILE = rsrc/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/build/Debug-iphonesimulator\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "cineti.ca-iphone";
 			};
 			name = Debug;
@@ -231,6 +369,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
 				INFOPLIST_FILE = rsrc/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/build/Debug-iphonesimulator\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "cineti.ca-iphone";
 			};
 			name = Release;
@@ -261,6 +404,31 @@
 			};
 			name = Release;
 		};
+		DBF7D856117FA277002B0C96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PREBINDING = NO;
+				PRODUCT_NAME = "json-framework";
+			};
+			name = Debug;
+		};
+		DBF7D857117FA277002B0C96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PREBINDING = NO;
+				PRODUCT_NAME = "json-framework";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -278,6 +446,15 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBF7D85A117FA292002B0C96 /* Build configuration list for PBXNativeTarget "json-framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBF7D856117FA277002B0C96 /* Debug */,
+				DBF7D857117FA277002B0C96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
