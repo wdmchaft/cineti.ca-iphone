@@ -23,6 +23,11 @@
     return self;
 }
 
+// Our own designated initializer, since we don't care about nibs.
+- (id)init {
+    return [self initWithNibName:nil bundle:nil];
+}
+
 - (void)loadView
 {
     [super loadView];
