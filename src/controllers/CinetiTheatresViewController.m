@@ -21,6 +21,16 @@
 }
 */
 
+- (id)init
+{
+    if (self = [super init])
+    {
+        self.title = @"Theatres";
+    }
+    
+    return self;
+}
+
 /*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {

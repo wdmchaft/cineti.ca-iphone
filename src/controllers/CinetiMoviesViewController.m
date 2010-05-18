@@ -22,6 +22,16 @@
 }
 */
 
+- (id)init
+{
+    if (self = [super init])
+    {
+        self.title = @"Movies";
+        //self.navigationItem.title = @"Movies View";
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

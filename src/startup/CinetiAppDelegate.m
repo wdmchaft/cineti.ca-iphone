@@ -7,7 +7,8 @@
 //
 
 #import "CinetiAppDelegate.h"
-
+#import "CinetiMoviesViewController.h"
+#import "CinetiTheatresViewController.h"
 
 @implementation CinetiAppDelegate
 
@@ -17,8 +18,24 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
     
+    window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    tabBarController = [[UITabBarController alloc] init];
+    
+    // Create the controllers that will go in the tabs
+    CinetiMoviesViewController *movies = [[[CinetiMoviesViewController alloc] init] autorelease];
+    CinetiTheatresViewController *theatres = [[[CinetiTheatresViewController alloc] init] autorelease];
+    
+    // Add the tabs to the tab bar controller
+    [tabBarController setViewControllers:
+     [NSArray arrayWithObjects:
+      [[[UINavigationController alloc] initWithRootViewController:movies] autorelease], 
+      [[[UINavigationController alloc] initWithRootViewController:theatres] autorelease],
+      nil]];
+    
     // Add the tab bar controller's current view as a subview of the window
     [window addSubview:tabBarController.view];
+    [window makeKeyAndVisible];
 }
 
 

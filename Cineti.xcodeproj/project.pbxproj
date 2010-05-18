@@ -386,7 +386,6 @@
 		DB43933D1180AFBE008D4114 /* libthree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43901C11809FBF008D4114 /* libthree20.a */; };
 		DB4393411180B018008D4114 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4393401180B018008D4114 /* QuartzCore.framework */; };
 		DB4393671180B0A8008D4114 /* CinetiJSONRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4393661180B0A8008D4114 /* CinetiJSONRequest.m */; };
-		DBF7D71C117F5AAD002B0C96 /* CinetiMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF7D719117F5AAD002B0C96 /* CinetiMainWindow.xib */; };
 		DBF7D71D117F5AAD002B0C96 /* CinetiTheatresView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF7D71A117F5AAD002B0C96 /* CinetiTheatresView.xib */; };
 		DBF7D75D117F8908002B0C96 /* CinetiMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D75C117F8908002B0C96 /* CinetiMoviesViewController.m */; };
 		DBF7D75F117F894E002B0C96 /* CinetiMoviesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF7D75E117F894E002B0C96 /* CinetiMoviesView.xib */; };
@@ -408,11 +407,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6E94936F11868B21006D6AC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E9FB67311864104004E6274;
+			remoteInfo = LogicTests;
+		};
 		DB43901F11809FCD008D4114 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DB43901B11809FBF008D4114 /* three20 */;
+			remoteGlobalIDString = DB43901B11809FBF008D4114;
 			remoteInfo = three20;
 		};
 		DBF7D954117FA44A002B0C96 /* PBXContainerItemProxy */ = {
@@ -432,6 +438,7 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6E9FB67411864104004E6274 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB43901C11809FBF008D4114 /* libthree20.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libthree20.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4390231180A01B008D4114 /* NSArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSArrayAdditions.m; path = "third-party/three20/src/NSArrayAdditions.m"; sourceTree = "<group>"; };
 		DB4390241180A01B008D4114 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDataAdditions.m; path = "third-party/three20/src/NSDataAdditions.m"; sourceTree = "<group>"; };
@@ -812,7 +819,6 @@
 		DB4393651180B0A8008D4114 /* CinetiJSONRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiJSONRequest.h; sourceTree = "<group>"; };
 		DB4393661180B0A8008D4114 /* CinetiJSONRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiJSONRequest.m; sourceTree = "<group>"; };
 		DB4393681180B1AE008D4114 /* CinetiJSONRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiJSONRequestDelegate.h; sourceTree = "<group>"; };
-		DBF7D719117F5AAD002B0C96 /* CinetiMainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CinetiMainWindow.xib; sourceTree = "<group>"; };
 		DBF7D71A117F5AAD002B0C96 /* CinetiTheatresView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CinetiTheatresView.xib; sourceTree = "<group>"; };
 		DBF7D71E117F5B13002B0C96 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBF7D720117F5B2E002B0C96 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
@@ -851,6 +857,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6E9FB67111864104004E6274 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DB43901A11809FBF008D4114 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -874,6 +887,7 @@
 				1D6058910D05DD3D006BFB54 /* cineti.ca-iphone.app */,
 				DBF7D855117FA276002B0C96 /* libjson-framework.a */,
 				DB43901C11809FBF008D4114 /* libthree20.a */,
+				6E9FB67411864104004E6274 /* LogicTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -898,7 +912,6 @@
 			isa = PBXGroup;
 			children = (
 				29B97316FDCFA39411CA2CEA /* main.m */,
-				DBF7D719117F5AAD002B0C96 /* CinetiMainWindow.xib */,
 				1D3623240D0F684500981E51 /* CinetiAppDelegate.h */,
 				1D3623250D0F684500981E51 /* CinetiAppDelegate.m */,
 			);
@@ -1618,11 +1631,30 @@
 			dependencies = (
 				DBF7D955117FA44A002B0C96 /* PBXTargetDependency */,
 				DB43902011809FCD008D4114 /* PBXTargetDependency */,
+				6E94937011868B21006D6AC7 /* PBXTargetDependency */,
 			);
 			name = "cineti.ca-iphone";
 			productName = "cineti.ca-iphone";
 			productReference = 1D6058910D05DD3D006BFB54 /* cineti.ca-iphone.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6E9FB67311864104004E6274 /* LogicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E9FB67811864104004E6274 /* Build configuration list for PBXNativeTarget "LogicTests" */;
+			buildPhases = (
+				6E9FB66F11864104004E6274 /* Resources */,
+				6E9FB67011864104004E6274 /* Sources */,
+				6E9FB67111864104004E6274 /* Frameworks */,
+				6E9FB67211864104004E6274 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LogicTests;
+			productName = LogicTests;
+			productReference = 6E9FB67411864104004E6274 /* LogicTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 		DB43901B11809FBF008D4114 /* three20 */ = {
 			isa = PBXNativeTarget;
@@ -1673,6 +1705,7 @@
 				1D6058900D05DD3D006BFB54 /* cineti.ca-iphone */,
 				DBF7D854117FA276002B0C96 /* json-framework */,
 				DB43901B11809FBF008D4114 /* three20 */,
+				6E9FB67311864104004E6274 /* LogicTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1682,13 +1715,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBF7D71C117F5AAD002B0C96 /* CinetiMainWindow.xib in Resources */,
 				DBF7D71D117F5AAD002B0C96 /* CinetiTheatresView.xib in Resources */,
 				DBF7D75F117F894E002B0C96 /* CinetiMoviesView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6E9FB66F11864104004E6274 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E9FB67211864104004E6274 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
@@ -1703,6 +1758,13 @@
 				DB43930A1180A23D008D4114 /* CinetiJSONObject.m in Sources */,
 				DB4393141180A670008D4114 /* CinetiMoviesRequest.m in Sources */,
 				DB4393671180B0A8008D4114 /* CinetiJSONRequest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E9FB67011864104004E6274 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1897,6 +1959,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6E94937011868B21006D6AC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E9FB67311864104004E6274 /* LogicTests */;
+			targetProxy = 6E94936F11868B21006D6AC7 /* PBXContainerItemProxy */;
+		};
 		DB43902011809FCD008D4114 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DB43901B11809FBF008D4114 /* three20 */;
@@ -1945,6 +2012,64 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "cineti.ca-iphone";
+			};
+			name = Release;
+		};
+		6E9FB67611864104004E6274 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "LogicTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = LogicTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		6E9FB67711864104004E6274 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = "LogicTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = LogicTests;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -2032,6 +2157,15 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E9FB67811864104004E6274 /* Build configuration list for PBXNativeTarget "LogicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E9FB67611864104004E6274 /* Debug */,
+				6E9FB67711864104004E6274 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
