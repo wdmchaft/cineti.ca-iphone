@@ -23,18 +23,12 @@
     return self;
 }
 
-// FIXME: Could this be done in viewDidLoad instead?  Should I un-do it in viewDidUnload?
 - (void)loadView
 {
     [super loadView];
     self.view = [[[UIView alloc] initWithFrame:TTApplicationFrame()] autorelease];
     thumbsViewController = [[TTThumbsViewController alloc] init];
     [self.view addSubview:thumbsViewController.view];
-}
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
     [[CinetiMoviesRequest moviesRequestWithDelegate:self] retain];
 }
 
@@ -56,7 +50,7 @@
 
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
+	thumbsViewController = nil;
 }
 
 
