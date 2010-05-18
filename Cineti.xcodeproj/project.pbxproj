@@ -389,7 +389,6 @@
 		DB4393671180B0A8008D4114 /* CinetiJSONRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4393661180B0A8008D4114 /* CinetiJSONRequest.m */; };
 		DBF7D71D117F5AAD002B0C96 /* CinetiTheatresView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF7D71A117F5AAD002B0C96 /* CinetiTheatresView.xib */; };
 		DBF7D75D117F8908002B0C96 /* CinetiMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D75C117F8908002B0C96 /* CinetiMoviesViewController.m */; };
-		DBF7D75F117F894E002B0C96 /* CinetiMoviesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF7D75E117F894E002B0C96 /* CinetiMoviesView.xib */; };
 		DBF7D78F117F8BDA002B0C96 /* CinetiTheatresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D78E117F8BDA002B0C96 /* CinetiTheatresViewController.m */; };
 		DBF7D947117FA42C002B0C96 /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF7D93A117FA42C002B0C96 /* JSON.h */; };
 		DBF7D948117FA42C002B0C96 /* NSObject+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF7D93B117FA42C002B0C96 /* NSObject+SBJSON.h */; };
@@ -827,7 +826,6 @@
 		DBF7D720117F5B2E002B0C96 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		DBF7D75B117F8908002B0C96 /* CinetiMoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiMoviesViewController.h; sourceTree = "<group>"; };
 		DBF7D75C117F8908002B0C96 /* CinetiMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiMoviesViewController.m; sourceTree = "<group>"; };
-		DBF7D75E117F894E002B0C96 /* CinetiMoviesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CinetiMoviesView.xib; sourceTree = "<group>"; };
 		DBF7D78D117F8BDA002B0C96 /* CinetiTheatresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiTheatresViewController.h; sourceTree = "<group>"; };
 		DBF7D78E117F8BDA002B0C96 /* CinetiTheatresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiTheatresViewController.m; sourceTree = "<group>"; };
 		DBF7D855117FA276002B0C96 /* libjson-framework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libjson-framework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1349,7 +1347,6 @@
 		DBF7D6F8117F583F002B0C96 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DBF7D75E117F894E002B0C96 /* CinetiMoviesView.xib */,
 				DBF7D71A117F5AAD002B0C96 /* CinetiTheatresView.xib */,
 			);
 			name = Views;
@@ -1730,7 +1727,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBF7D71D117F5AAD002B0C96 /* CinetiTheatresView.xib in Resources */,
-				DBF7D75F117F894E002B0C96 /* CinetiMoviesView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

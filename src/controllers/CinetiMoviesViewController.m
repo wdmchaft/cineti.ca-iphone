@@ -8,9 +8,11 @@
 
 #import "CinetiMoviesViewController.h"
 #import "CinetiMoviesRequest.h"
-
+#import "Three20/Three20.h"
 
 @implementation CinetiMoviesViewController
+
+@synthesize thumbsViewController;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -32,10 +34,19 @@
     return self;
 }
 
+// FIXME: Could this be done in viewDidLoad instead?  Should I un-do it in viewDidUnload?
+- (void)loadView
+{
+    [super loadView];
+    self.view = [[[UIView alloc] initWithFrame:TTApplicationFrame()] autorelease];
+    thumbsViewController = [[TTThumbsViewController alloc] init];
+    [self.view addSubview:thumbsViewController.view];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	[[CinetiMoviesRequest moviesRequestWithDelegate:self] retain];
+    [[CinetiMoviesRequest moviesRequestWithDelegate:self] retain];
 }
 
 
@@ -61,6 +72,7 @@
 
 
 - (void)dealloc {
+    [thumbsViewController release];
     [super dealloc];
 }
 

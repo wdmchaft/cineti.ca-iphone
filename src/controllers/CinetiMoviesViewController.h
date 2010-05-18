@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "CinetiMoviesRequestDelegate.h"
 
+@class TTThumbsViewController;
 
 @interface CinetiMoviesViewController : UIViewController <CinetiMoviesRequestDelegate> {
-
+    TTThumbsViewController *thumbsViewController;
 }
+
+@property (nonatomic, retain) TTThumbsViewController *thumbsViewController;
 
 @end
