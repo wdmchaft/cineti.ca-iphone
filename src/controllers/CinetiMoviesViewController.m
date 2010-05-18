@@ -14,20 +14,9 @@
 
 @synthesize thumbsViewController;
 
-/*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
-
-- (id)init
-{
-    if (self = [super init])
-    {
         self.title = @"Movies";
         //self.navigationItem.title = @"Movies View";
     }
