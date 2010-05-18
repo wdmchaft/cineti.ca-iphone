@@ -12,6 +12,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
+		6EB5DF3C11A2764700F3847F /* LogicTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5DF3B11A2764700F3847F /* LogicTestCase.m */; };
 		DB4390CB1180A01C008D4114 /* NSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4390231180A01B008D4114 /* NSArrayAdditions.m */; };
 		DB4390CC1180A01C008D4114 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4390241180A01B008D4114 /* NSDataAdditions.m */; };
 		DB4390CD1180A01C008D4114 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4390251180A01B008D4114 /* NSDateAdditions.m */; };
@@ -439,6 +440,8 @@
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E9FB67411864104004E6274 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EB5DF3A11A2764700F3847F /* LogicTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicTestCase.h; sourceTree = "<group>"; };
+		6EB5DF3B11A2764700F3847F /* LogicTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogicTestCase.m; sourceTree = "<group>"; };
 		DB43901C11809FBF008D4114 /* libthree20.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libthree20.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4390231180A01B008D4114 /* NSArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSArrayAdditions.m; path = "third-party/three20/src/NSArrayAdditions.m"; sourceTree = "<group>"; };
 		DB4390241180A01B008D4114 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDataAdditions.m; path = "third-party/three20/src/NSDataAdditions.m"; sourceTree = "<group>"; };
@@ -895,6 +898,7 @@
 		29B97314FDCFA39411CA2CEA /* cineti.ca-iphone */ = {
 			isa = PBXGroup;
 			children = (
+				6EB5DF3811A2760200F3847F /* Tests */,
 				DBF7D6F7117F582B002B0C96 /* Models */,
 				DBF7D6F9117F5846002B0C96 /* Controllers */,
 				DBF7D6F8117F583F002B0C96 /* Views */,
@@ -937,6 +941,16 @@
 				DB4393401180B018008D4114 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6EB5DF3811A2760200F3847F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6EB5DF3A11A2764700F3847F /* LogicTestCase.h */,
+				6EB5DF3B11A2764700F3847F /* LogicTestCase.m */,
+			);
+			name = Tests;
+			path = src/tests;
 			sourceTree = "<group>";
 		};
 		DB43902111809FD6008D4114 /* three20 */ = {
@@ -1765,6 +1779,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB5DF3C11A2764700F3847F /* LogicTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
