@@ -7,20 +7,7 @@
 //
 
 #import "CinetiPhotoSource.h"
-
-#pragma mark -
-
-@interface CinetiMoviePoster : NSObject <TTPhoto>
-{
-    NSString *caption;
-    id <TTPhotoSource> photoSource;
-    CGSize size;
-    NSInteger index;
-}
-
-@end
-
-#pragma mark -
+#import "CinetiMoviePoster.h"
 
 @implementation CinetiPhotoSource
 
@@ -71,37 +58,3 @@
 @end
 
 #pragma mark -
-
-@implementation CinetiMoviePoster
-
-// TTPhoto protocol properties
-@synthesize caption;
-@synthesize photoSource;
-@synthesize size;
-@synthesize index;
-
-- (id)init {
-    NSLog(@"CinetiMoviePoster: init");
-    if (self = [super init]) {
-        self.caption = @"A Movie Caption";
-        self.size = CGSizeMake(140, 207);
-    }
-    return self;
-}
-
-- (void)dealloc {
-    [super dealloc];
-}
-
-#pragma mark TTPhoto methods
-
-- (NSString *)URLForVersion:(TTPhotoVersion)version
-{
-    NSLog(@"CinetiMoviePoster: URLForVersion(%@)", version);
-    if (version == TTPhotoVersionThumbnail)
-        return @"http://cineti.ca/poster/34687_thumb.jpg";
-    else
-        return @"http://cineti.ca/poster/34687.jpg";
-}
-
-@end
