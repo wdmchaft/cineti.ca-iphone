@@ -6,15 +6,12 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "CinetiMoviesRequestDelegate.h"
+#import "CinetiPhotoSource.h"
+#import "Three20/Three20.h"
 
-@class TTThumbsViewController;
+@interface CinetiMoviesViewController : TTThumbsViewController <CinetiMoviesRequestDelegate> {
 
-@interface CinetiMoviesViewController : UIViewController <CinetiMoviesRequestDelegate> {
-    TTThumbsViewController *thumbsViewController;
 }
-
-@property (nonatomic, retain) TTThumbsViewController *thumbsViewController;
 
 @end

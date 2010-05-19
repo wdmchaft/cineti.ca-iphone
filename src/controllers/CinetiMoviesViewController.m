@@ -13,13 +13,10 @@
 
 @implementation CinetiMoviesViewController
 
-@synthesize thumbsViewController;
-
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         self.title = @"Movies";
-        //self.navigationItem.title = @"Movies View";
     }
     return self;
 }
@@ -31,11 +28,9 @@
 
 - (void)loadView
 {
+    NSLog(@"CinetiMoviesViewController: loadView");
     [super loadView];
-    self.view = [[[UIView alloc] initWithFrame:TTApplicationFrame()] autorelease];
-    thumbsViewController = [[TTThumbsViewController alloc] init];
-    thumbsViewController.photoSource = [[[CinetiPhotoSource alloc] init] autorelease];
-    [self.view addSubview:thumbsViewController.view];
+    self.photoSource = [[[CinetiPhotoSource alloc] init] autorelease];
     [[CinetiMoviesRequest moviesRequestWithDelegate:self] retain];
 }
 
@@ -57,12 +52,10 @@
 
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
-	thumbsViewController = nil;
 }
 
 
 - (void)dealloc {
-    [thumbsViewController release];
     [super dealloc];
 }
 
