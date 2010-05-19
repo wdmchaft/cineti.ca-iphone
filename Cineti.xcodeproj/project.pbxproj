@@ -13,6 +13,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		6EB5DF3C11A2764700F3847F /* LogicTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5DF3B11A2764700F3847F /* LogicTestCase.m */; };
+		6EB5E01411A3B2A300F3847F /* CinetiPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E01311A3B2A300F3847F /* CinetiPhotoSource.m */; };
 		DB4390CB1180A01C008D4114 /* NSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4390231180A01B008D4114 /* NSArrayAdditions.m */; };
 		DB4390CC1180A01C008D4114 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4390241180A01B008D4114 /* NSDataAdditions.m */; };
 		DB4390CD1180A01C008D4114 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4390251180A01B008D4114 /* NSDateAdditions.m */; };
@@ -441,6 +442,8 @@
 		6E9FB67411864104004E6274 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB5DF3A11A2764700F3847F /* LogicTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicTestCase.h; sourceTree = "<group>"; };
 		6EB5DF3B11A2764700F3847F /* LogicTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogicTestCase.m; sourceTree = "<group>"; };
+		6EB5E01211A3B2A300F3847F /* CinetiPhotoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiPhotoSource.h; sourceTree = "<group>"; };
+		6EB5E01311A3B2A300F3847F /* CinetiPhotoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiPhotoSource.m; sourceTree = "<group>"; };
 		DB43901C11809FBF008D4114 /* libthree20.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libthree20.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4390231180A01B008D4114 /* NSArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSArrayAdditions.m; path = "third-party/three20/src/NSArrayAdditions.m"; sourceTree = "<group>"; };
 		DB4390241180A01B008D4114 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDataAdditions.m; path = "third-party/three20/src/NSDataAdditions.m"; sourceTree = "<group>"; };
@@ -1339,6 +1342,8 @@
 				DB4393131180A670008D4114 /* CinetiMoviesRequest.m */,
 				DB4393051180A0E3008D4114 /* CinetiMovie.h */,
 				DB4393061180A0E3008D4114 /* CinetiMovie.m */,
+				6EB5E01211A3B2A300F3847F /* CinetiPhotoSource.h */,
+				6EB5E01311A3B2A300F3847F /* CinetiPhotoSource.m */,
 			);
 			name = Models;
 			path = src/models;
@@ -1768,6 +1773,7 @@
 				DB43930A1180A23D008D4114 /* CinetiJSONObject.m in Sources */,
 				DB4393141180A670008D4114 /* CinetiMoviesRequest.m in Sources */,
 				DB4393671180B0A8008D4114 /* CinetiJSONRequest.m in Sources */,
+				6EB5E01411A3B2A300F3847F /* CinetiPhotoSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

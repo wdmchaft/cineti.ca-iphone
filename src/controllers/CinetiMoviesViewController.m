@@ -8,6 +8,7 @@
 
 #import "CinetiMoviesViewController.h"
 #import "CinetiMoviesRequest.h"
+#import "CinetiPhotoSource.h"
 #import "Three20/Three20.h"
 
 @implementation CinetiMoviesViewController
@@ -33,6 +34,7 @@
     [super loadView];
     self.view = [[[UIView alloc] initWithFrame:TTApplicationFrame()] autorelease];
     thumbsViewController = [[TTThumbsViewController alloc] init];
+    thumbsViewController.photoSource = [[[CinetiPhotoSource alloc] init] autorelease];
     [self.view addSubview:thumbsViewController.view];
     [[CinetiMoviesRequest moviesRequestWithDelegate:self] retain];
 }
