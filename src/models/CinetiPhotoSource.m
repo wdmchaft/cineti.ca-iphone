@@ -24,11 +24,23 @@
 
 @implementation CinetiPhotoSource
 
+@synthesize photos;
+
 - (id)init {
+    NSLog(@"CinetiPhotoSource: init");
     if (self = [super init]) {
         self.title = @"Test Photo Source";
+        CinetiMoviePoster *poster = [[[CinetiMoviePoster alloc] init] autorelease];
+        poster.photoSource = self;
+        poster.index = 0;
+        self.photos = [[NSArray alloc] initWithObjects:poster, nil];
     }
     return self;
+}
+
+- (void)dealloc {
+    [self.photos dealloc];
+    [super dealloc];
 }
 
 #pragma mark TTPhotoSource Methods
@@ -37,12 +49,14 @@
 
 - (NSInteger)numberOfPhotos
 {
-    return 1; 
+    NSLog(@"CinetiPhotoSource: numberOfPhotos");
+    return [self.photos count];
 }
 
 - (NSInteger)maxPhotoIndex
 {
-    return 1;
+    NSLog(@"CinetiPhotoSource: maxPhotoIndex (%d)", [self.photos count] - 1);
+    return [self.photos count] - 1;
 }
 
 - (id<TTPhoto>)photoAtIndex:(NSInteger)index
@@ -51,12 +65,8 @@
     if (index < 0 || index > [self maxPhotoIndex])
         return nil;
     
-    return [[[CinetiMoviePoster alloc] init] autorelease];
+    return [self.photos objectAtIndex:index];
 }
-
-#pragma mark TTURLRequestModel Methods
-
-
 
 @end
 
@@ -71,6 +81,7 @@
 @synthesize index;
 
 - (id)init {
+    NSLog(@"CinetiMoviePoster: init");
     if (self = [super init]) {
         self.caption = @"A Movie Caption";
         self.size = CGSizeMake(140, 207);
@@ -79,8 +90,6 @@
 }
 
 - (void)dealloc {
-    [caption release];
-    [photoSource release];
     [super dealloc];
 }
 
@@ -88,7 +97,11 @@
 
 - (NSString *)URLForVersion:(TTPhotoVersion)version
 {
-    return @"http://cineti.ca/poster/11913.jpg";
+    NSLog(@"CinetiMoviePoster: URLForVersion(%@)", version);
+    if (version == TTPhotoVersionThumbnail)
+        return @"http://cineti.ca/poster/34687_thumb.jpg";
+    else
+        return @"http://cineti.ca/poster/34687.jpg";
 }
 
 @end

@@ -11,6 +11,9 @@
 
 @interface CinetiPhotoSource : TTURLRequestModel <TTPhotoSource> {
     NSString *title;
+    NSArray *photos;
 }
+
+@property (nonatomic, retain) NSArray *photos;
 
 @end
