@@ -87,6 +87,12 @@
 
 - (void)moviesRequest:(CinetiMoviesRequest *)request didSucceedWithMovies:(NSArray *)movies {
 	NSLog( @"Successfully retrieved %d movies", [movies count] );
+    
+    for (id movie in movies)
+    {
+        NSLog(@"Got movie %@", [movie valueForKey:@"title"]);
+        [(CinetiPhotoSource *)self.photoSource addMovie:movie];
+    }
 	[request autorelease];
 }
 
