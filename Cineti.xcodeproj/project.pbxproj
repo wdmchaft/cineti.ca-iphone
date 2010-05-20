@@ -13,6 +13,27 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		6E9A3D0211A48E7D00BF0CC5 /* CinetiMoviePoster.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A3D0111A48E7D00BF0CC5 /* CinetiMoviePoster.m */; };
+		6E9A3F5C11A5D5DD00BF0CC5 /* libjson-framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF7D855117FA276002B0C96 /* libjson-framework.a */; };
+		6E9A3F5D11A5D5E800BF0CC5 /* libthree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43901C11809FBF008D4114 /* libthree20.a */; };
+		6E9A3F6011A5D67200BF0CC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		6E9A3FB211A5D69C00BF0CC5 /* cineti.ca-iphone.app in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6058910D05DD3D006BFB54 /* cineti.ca-iphone.app */; };
+		6E9A3FCD11A5D6F900BF0CC5 /* CinetiJSONObject.h in Sources */ = {isa = PBXBuildFile; fileRef = DB4393081180A23D008D4114 /* CinetiJSONObject.h */; };
+		6E9A3FCE11A5D6F900BF0CC5 /* CinetiJSONObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4393091180A23D008D4114 /* CinetiJSONObject.m */; };
+		6E9A3FCF11A5D6F900BF0CC5 /* CinetiJSONRequestDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = DB4393681180B1AE008D4114 /* CinetiJSONRequestDelegate.h */; };
+		6E9A3FD011A5D6F900BF0CC5 /* CinetiJSONRequest.h in Sources */ = {isa = PBXBuildFile; fileRef = DB4393651180B0A8008D4114 /* CinetiJSONRequest.h */; };
+		6E9A3FD111A5D6F900BF0CC5 /* CinetiJSONRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4393661180B0A8008D4114 /* CinetiJSONRequest.m */; };
+		6E9A3FD211A5D6F900BF0CC5 /* CinetiMoviesRequestDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = DB43930F1180A5B1008D4114 /* CinetiMoviesRequestDelegate.h */; };
+		6E9A3FD311A5D6F900BF0CC5 /* CinetiMoviesRequest.h in Sources */ = {isa = PBXBuildFile; fileRef = DB4393121180A670008D4114 /* CinetiMoviesRequest.h */; };
+		6E9A3FD411A5D6F900BF0CC5 /* CinetiMoviesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4393131180A670008D4114 /* CinetiMoviesRequest.m */; };
+		6E9A3FD511A5D6F900BF0CC5 /* CinetiMovie.h in Sources */ = {isa = PBXBuildFile; fileRef = DB4393051180A0E3008D4114 /* CinetiMovie.h */; };
+		6E9A3FD611A5D6F900BF0CC5 /* CinetiMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4393061180A0E3008D4114 /* CinetiMovie.m */; };
+		6E9A3FD711A5D6F900BF0CC5 /* CinetiPhotoSource.h in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E01211A3B2A300F3847F /* CinetiPhotoSource.h */; };
+		6E9A3FD811A5D6F900BF0CC5 /* CinetiPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E01311A3B2A300F3847F /* CinetiPhotoSource.m */; };
+		6E9A3FD911A5D6F900BF0CC5 /* CinetiMoviePoster.h in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A3D0011A48E7D00BF0CC5 /* CinetiMoviePoster.h */; };
+		6E9A3FDA11A5D6F900BF0CC5 /* CinetiMoviePoster.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A3D0111A48E7D00BF0CC5 /* CinetiMoviePoster.m */; };
+		6E9A3FEC11A5DA3D00BF0CC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
+		6E9A3FED11A5DA4600BF0CC5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4393401180B018008D4114 /* QuartzCore.framework */; };
+		6E9A3FEE11A5DA5200BF0CC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		6EB5DF3C11A2764700F3847F /* LogicTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5DF3B11A2764700F3847F /* LogicTestCase.m */; };
 		6EB5E01411A3B2A300F3847F /* CinetiPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E01311A3B2A300F3847F /* CinetiPhotoSource.m */; };
 		DB4390CB1180A01C008D4114 /* NSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4390231180A01B008D4114 /* NSArrayAdditions.m */; };
@@ -415,6 +436,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6E9FB67311864104004E6274;
 			remoteInfo = LogicTests;
+		};
+		6E9A3FDD11A5D7DF00BF0CC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBF7D854117FA276002B0C96 /* json-framework */;
+			remoteInfo = "json-framework";
+		};
+		6E9A3FDF11A5D7E300BF0CC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB43901B11809FBF008D4114 /* three20 */;
+			remoteInfo = three20;
 		};
 		DB43901F11809FCD008D4114 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -868,6 +903,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E9A3FB211A5D69C00BF0CC5 /* cineti.ca-iphone.app in Frameworks */,
+				6E9A3F6011A5D67200BF0CC5 /* Foundation.framework in Frameworks */,
+				6E9A3F5C11A5D5DD00BF0CC5 /* libjson-framework.a in Frameworks */,
+				6E9A3F5D11A5D5E800BF0CC5 /* libthree20.a in Frameworks */,
+				6E9A3FEC11A5DA3D00BF0CC5 /* CoreGraphics.framework in Frameworks */,
+				6E9A3FED11A5DA4600BF0CC5 /* QuartzCore.framework in Frameworks */,
+				6E9A3FEE11A5DA5200BF0CC5 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1671,6 +1713,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				6E9A3FDE11A5D7DF00BF0CC5 /* PBXTargetDependency */,
+				6E9A3FE011A5D7E300BF0CC5 /* PBXTargetDependency */,
 			);
 			name = LogicTests;
 			productName = LogicTests;
@@ -1787,6 +1831,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E9A3FCD11A5D6F900BF0CC5 /* CinetiJSONObject.h in Sources */,
+				6E9A3FCE11A5D6F900BF0CC5 /* CinetiJSONObject.m in Sources */,
+				6E9A3FCF11A5D6F900BF0CC5 /* CinetiJSONRequestDelegate.h in Sources */,
+				6E9A3FD011A5D6F900BF0CC5 /* CinetiJSONRequest.h in Sources */,
+				6E9A3FD111A5D6F900BF0CC5 /* CinetiJSONRequest.m in Sources */,
+				6E9A3FD211A5D6F900BF0CC5 /* CinetiMoviesRequestDelegate.h in Sources */,
+				6E9A3FD311A5D6F900BF0CC5 /* CinetiMoviesRequest.h in Sources */,
+				6E9A3FD411A5D6F900BF0CC5 /* CinetiMoviesRequest.m in Sources */,
+				6E9A3FD511A5D6F900BF0CC5 /* CinetiMovie.h in Sources */,
+				6E9A3FD611A5D6F900BF0CC5 /* CinetiMovie.m in Sources */,
+				6E9A3FD711A5D6F900BF0CC5 /* CinetiPhotoSource.h in Sources */,
+				6E9A3FD811A5D6F900BF0CC5 /* CinetiPhotoSource.m in Sources */,
+				6E9A3FD911A5D6F900BF0CC5 /* CinetiMoviePoster.h in Sources */,
+				6E9A3FDA11A5D6F900BF0CC5 /* CinetiMoviePoster.m in Sources */,
 				6EB5DF3C11A2764700F3847F /* LogicTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1987,6 +2045,16 @@
 			target = 6E9FB67311864104004E6274 /* LogicTests */;
 			targetProxy = 6E94936F11868B21006D6AC7 /* PBXContainerItemProxy */;
 		};
+		6E9A3FDE11A5D7DF00BF0CC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBF7D854117FA276002B0C96 /* json-framework */;
+			targetProxy = 6E9A3FDD11A5D7DF00BF0CC5 /* PBXContainerItemProxy */;
+		};
+		6E9A3FE011A5D7E300BF0CC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB43901B11809FBF008D4114 /* three20 */;
+			targetProxy = 6E9A3FDF11A5D7E300BF0CC5 /* PBXContainerItemProxy */;
+		};
 		DB43902011809FCD008D4114 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DB43901B11809FBF008D4114 /* three20 */;
@@ -2052,8 +2120,15 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "third-party/three20/src";
 				INFOPLIST_FILE = "LogicTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/build/Debug-iphonesimulator",
+				);
 				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
 					"-framework",
 					Foundation,
 					"-framework",
