@@ -13,6 +13,7 @@
 
 @implementation CinetiMoviesViewController
 
+
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
@@ -21,15 +22,15 @@
     return self;
 }
 
-// Our own designated initializer, since we don't care about nibs.
+// Our own convenience initializer, since we don't care about nibs.
 - (id)init {
     return [self initWithNibName:nil bundle:nil];
 }
 
-- (void)loadView
+- (void)viewDidLoad
 {
-    NSLog(@"CinetiMoviesViewController: loadView");
-    [super loadView];
+    NSLog(@"CinetiMoviesViewController: viewDidLoad");
+    [super viewDidLoad];
     self.photoSource = [[[CinetiPhotoSource alloc] init] autorelease];
     [[CinetiMoviesRequest moviesRequestWithDelegate:self] retain];
 }
@@ -58,7 +59,6 @@
 - (void)dealloc {
     [super dealloc];
 }
-
 
 - (void)moviesRequest:(CinetiMoviesRequest *)request didSucceedWithMovies:(NSArray *)movies {
 	NSLog( @"Successfully retrieved %d movies", [movies count] );
