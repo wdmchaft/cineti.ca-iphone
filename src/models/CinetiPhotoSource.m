@@ -11,50 +11,46 @@
 
 @implementation CinetiPhotoSource
 
-@synthesize photos;
-
 - (id)init {
     NSLog(@"CinetiPhotoSource: init");
     if (self = [super init]) {
-        self.title = @"Test Photo Source";
+        _title = @"Test Photo Source";
         CinetiMoviePoster *poster = [[[CinetiMoviePoster alloc] init] autorelease];
         poster.photoSource = self;
         poster.index = 0;
-        self.photos = [[NSArray alloc] initWithObjects:poster, nil];
+        _photos = [[NSArray alloc] initWithObjects:poster, nil];
     }
     return self;
 }
 
 - (void)dealloc {
-    [self.photos dealloc];
+    [_photos dealloc];
     [super dealloc];
 }
 
 #pragma mark TTPhotoSource Methods
 
-@synthesize title;
+@synthesize title = _title;
 
 - (NSInteger)numberOfPhotos
 {
     NSLog(@"CinetiPhotoSource: numberOfPhotos");
-    return [self.photos count];
+    return _photos.count;
 }
 
 - (NSInteger)maxPhotoIndex
 {
-    NSLog(@"CinetiPhotoSource: maxPhotoIndex (%d)", [self.photos count] - 1);
-    return [self.photos count] - 1;
+    NSLog(@"CinetiPhotoSource: maxPhotoIndex (%d)", [_photos count] - 1);
+    return _photos.count - 1;
 }
 
 - (id<TTPhoto>)photoAtIndex:(NSInteger)index
 {
-    NSLog(@"CinetiPhotoSource: photoAtIndex %@", index);
+    NSLog(@"CinetiPhotoSource: photoAtIndex %d", index);
     if (index < 0 || index > [self maxPhotoIndex])
         return nil;
     
-    return [self.photos objectAtIndex:index];
+    return [_photos objectAtIndex:index];
 }
 
 @end
-
-#pragma mark -

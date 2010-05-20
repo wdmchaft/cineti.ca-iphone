@@ -9,11 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "Three20/Three20.h"
 
-@interface CinetiPhotoSource : TTURLRequestModel <TTPhotoSource> {
-    NSString *title;
-    NSArray *photos;
+@interface CinetiPhotoSource : TTModel <TTPhotoSource> {
+    NSString *_title;
+    NSArray *_photos;
 }
-
-@property (nonatomic, retain) NSArray *photos;
 
 @end
