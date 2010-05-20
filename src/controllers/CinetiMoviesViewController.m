@@ -32,9 +32,34 @@
     NSLog(@"CinetiMoviesViewController: viewDidLoad");
     [super viewDidLoad];
     self.photoSource = [[[CinetiPhotoSource alloc] init] autorelease];
+    self.navigationBarStyle = UIBarStyleDefault;
+    self.navigationBarTintColor = [UIColor redColor];
+
     [[CinetiMoviesRequest moviesRequestWithDelegate:self] retain];
 }
 
+// TTThumbsViewController doesn't let you set the nav bar to translucent using 
+// its own properties (set in viewDidLoad) unless you set the navigationBarStyle 
+// to UIBarStyleBlackTranslucent; instead, if you want a translucent coloured 
+// nav bar, you have to set it yourself here.
+/*
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    UINavigationBar* navBar = self.navigationController.navigationBar;
+    navBar.tintColor = [UIColor redColor];
+    navBar.translucent = YES;
+}
+/**/
+
+// If the navigation bar is set to non-translucent, we need to adjust the offset 
+// of the table layout; TTThumbsViewController assumes that the navigation bar 
+// is translucent, and so manually ensures that the table view starts out below it.
+- (void)updateTableLayout
+{
+    self.tableView.contentInset = UIEdgeInsetsMake(4, 0, 0, 0); 
+    self.tableView.scrollIndicatorInsets = UIEdgeInsetsZero; 
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.
