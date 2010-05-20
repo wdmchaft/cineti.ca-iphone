@@ -9,9 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "Three20/Three20.h"
 
+@class CinetiMovie;
+
 @interface CinetiPhotoSource : TTModel <TTPhotoSource> {
     NSString *_title;
-    NSArray *_photos;
+    NSMutableArray *_photos;
 }
+
+- (void)addMovie:(CinetiMovie *)movie;
 
 @end

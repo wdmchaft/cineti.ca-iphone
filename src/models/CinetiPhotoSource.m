@@ -15,10 +15,7 @@
     NSLog(@"CinetiPhotoSource: init");
     if (self = [super init]) {
         _title = @"Test Photo Source";
-        CinetiMoviePoster *poster = [[[CinetiMoviePoster alloc] init] autorelease];
-        poster.photoSource = self;
-        poster.index = 0;
-        _photos = [[NSArray alloc] initWithObjects:poster, nil];
+        _photos = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -26,6 +23,25 @@
 - (void)dealloc {
     [_photos dealloc];
     [super dealloc];
+}
+
+- (void)addMovie:(CinetiMovie *)movie
+{
+    NSString *URL = nil;
+    NSString *thumbURL = nil;
+    NSArray *posterInfo = [movie valueForKey:@"posters"];
+    for (id posterType in posterInfo)
+    {
+        if ([posterType valueForKey:@"size"] == @"large")
+            URL = [posterType valueForKey:@"href"];
+        if ([posterType valueForKey:@"size"] == @"small")
+            thumbURL = [posterType valueForKey:@"href"];
+    }
+    NSString *title = [movie valueForKey:@"title"];
+    CinetiMoviePoster *poster = [CinetiMoviePoster moviePosterWithURL:URL withThumbURL:thumbURL withTitle:title];
+    poster.photoSource = self;
+    poster.index = [self numberOfPhotos];
+    [_photos addObject:poster];
 }
 
 #pragma mark TTPhotoSource Methods
