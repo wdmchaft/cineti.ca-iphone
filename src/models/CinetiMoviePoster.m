@@ -21,6 +21,8 @@
     if (self = [super init]) {
         self.caption = @"A Movie Caption";
         self.size = CGSizeMake(140, 207);
+        fullURL = @"http://cineti.ca/poster/34687.jpg";
+        thumbURL = @"http://cineti.ca/poster/34687_thumb.jpg";
     }
     return self;
 }
@@ -33,11 +35,17 @@
 
 - (NSString *)URLForVersion:(TTPhotoVersion)version
 {
-    NSLog(@"CinetiMoviePoster: URLForVersion(%@)", version);
+    NSLog(@"CinetiMoviePoster: URLForVersion(%d)", version);
     if (version == TTPhotoVersionThumbnail)
-        return @"http://cineti.ca/poster/34687_thumb.jpg";
+        return thumbURL;
+    else if (version == TTPhotoVersionSmall)
+        return thumbURL;
+    else if (version == TTPhotoVersionMedium)
+        return fullURL;
+    else if (version == TTPhotoVersionLarge)
+        return fullURL;
     else
-        return @"http://cineti.ca/poster/34687.jpg";
+        return nil;
 }
 
 @end

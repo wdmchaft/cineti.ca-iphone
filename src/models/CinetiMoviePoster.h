@@ -12,8 +12,10 @@
 
 @interface CinetiMoviePoster : NSObject <TTPhoto>
 {
-    NSString *caption;
     id <TTPhotoSource> photoSource;
+    NSString *caption;
+    NSString *fullURL;
+    NSString *thumbURL;
     CGSize size;
     NSInteger index;
 }
