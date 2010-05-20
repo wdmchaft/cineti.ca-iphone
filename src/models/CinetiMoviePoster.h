@@ -6,7 +6,7 @@
 //  Copyright 2010 The Navarra Group. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "Three20/TTPhoto.h"
 #import "Three20/TTPhotoSource.h"
 
@@ -19,5 +19,7 @@
     CGSize size;
     NSInteger index;
 }
+
++ moviePosterWithURL:(NSString *)URL withThumbURL:(NSString *)thumbURL withTitle:(NSString *)title;
 
 @end

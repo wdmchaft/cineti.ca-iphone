@@ -16,15 +16,20 @@
 @synthesize size;
 @synthesize index;
 
-- (id)init {
-    NSLog(@"CinetiMoviePoster: init");
+- (id)initWithURL:(NSString *)URL withThumbURL:(NSString *)thumbnailURL withTitle:(NSString *)title {
+    NSLog(@"CinetiMoviePoster: init(%@, %@, %@)", URL, thumbnailURL, title);
     if (self = [super init]) {
-        self.caption = @"A Movie Caption";
         self.size = CGSizeMake(140, 207);
-        fullURL = @"http://cineti.ca/poster/34687.jpg";
-        thumbURL = @"http://cineti.ca/poster/34687_thumb.jpg";
+        fullURL = URL;
+        thumbURL = thumbnailURL;
+        caption = title;
     }
     return self;
+}
+
++ (CinetiMoviePoster *)moviePosterWithURL:(NSString *)URL withThumbURL:(NSString *)thumbURL withTitle:(NSString *)title
+{
+    return [[[CinetiMoviePoster alloc] initWithURL:URL withThumbURL:thumbURL withTitle:title] autorelease];
 }
 
 - (void)dealloc {
