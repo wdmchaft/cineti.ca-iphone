@@ -20,7 +20,7 @@
 @dynamic title;
 
 - (NSString *)title {
-	return (NSString *)[self valueForKey:@"@text"];
+	return (NSString *)[self valueForKey:@"title"];
 }
 
 

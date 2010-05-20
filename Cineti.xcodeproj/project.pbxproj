@@ -441,14 +441,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DBF7D854117FA276002B0C96 /* json-framework */;
+			remoteGlobalIDString = DBF7D854117FA276002B0C96;
 			remoteInfo = "json-framework";
 		};
 		6E9A3FDF11A5D7E300BF0CC5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DB43901B11809FBF008D4114 /* three20 */;
+			remoteGlobalIDString = DB43901B11809FBF008D4114;
 			remoteInfo = three20;
 		};
 		DB43901F11809FCD008D4114 /* PBXContainerItemProxy */ = {
