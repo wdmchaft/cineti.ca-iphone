@@ -12,8 +12,8 @@
 
 @implementation LogicTestCase
 
-#define NVTESTEQ(a, b) STAssertEquals((a), (b), @"[%@] == [%@]", (a), (b))
-#define NVTESTSTREQ(a, b) STAssertTrue([(a) isEqualToString:(b)], @"[%@] == [%@]", (a), (b))
+#define NVPassEq(a, b) STAssertEquals((a), (b), @"[%@] == [%@]", (a), (b))
+#define NVPassStrEq(a, b) STAssertTrue([(a) isEqualToString:(b)], @"[%@] == [%@]", (a), (b))
 
 - (void) testFail {
     STAssertTrue(TRUE, @"This had better pass...");
@@ -40,7 +40,9 @@
     NSDictionary *rawMovie = [json JSONValue];
     CinetiMovie *movie = [CinetiMovie movieFromRawMovie:rawMovie];
     
-    NVTESTEQ([movie title], @"Movie Title Goes Here");
+    NVPassStrEq(movie.title, @"Movie Title Goes Here");
+    NVPassStrEq(movie.posterURL, @"http://example.com/poster.jpg");
+    NVPassStrEq(movie.posterThumbURL, @"http://example.com/poster_thumb.jpg");
 }
 
 @end

@@ -10,10 +10,14 @@
 
 
 @interface CinetiMovie : CinetiJSONObject {
+    NSString *_posterURL;
+    NSString *_posterThumbURL;
 }
 
 + movieFromRawMovie:(NSDictionary *)rawMovie;
 
-@property( readonly, nonatomic ) NSString *title;
+@property (readonly, nonatomic) NSString *title;
+@property (readonly, nonatomic) NSString *posterURL;
+@property (readonly, nonatomic) NSString *posterThumbURL;
 
 @end
