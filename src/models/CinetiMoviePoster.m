@@ -20,9 +20,9 @@
     NSLog(@"CinetiMoviePoster: init(%@, %@, %@)", URL, thumbnailURL, title);
     if (self = [super init]) {
         self.size = CGSizeMake(140, 207);
-        fullURL = URL;
-        thumbURL = thumbnailURL;
-        caption = title;
+        fullURL = [URL copy];
+        thumbURL = [thumbnailURL copy];
+        caption = [title copy];
     }
     return self;
 }
@@ -33,6 +33,9 @@
 }
 
 - (void)dealloc {
+    [fullURL release];
+    [thumbURL release];
+    [caption release];
     [super dealloc];
 }
 
