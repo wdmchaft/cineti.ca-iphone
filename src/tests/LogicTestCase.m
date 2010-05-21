@@ -26,21 +26,9 @@
 
 - (void)testMovieAttributes {
     //NSDictionary *rawMovie = [NSDictionary dictionaryWithObjectsAndKeys:
-    NSString *json = @"{\"posters\": ["
-        "{\"href\": \"http://example.com/poster.jpg\", \"size\": \"large\"},"
-        "{\"href\": \"http://example.com/poster_thumb.jpg\", \"size\": \"small\"}"
-    "],"
-    "\"theaters\": ["
-        "{\"date\": \"2010-05-19\", "
-        "\"times\": ["
-           "\"14:50:00\"," 
-           "\"17:10:00\"" 
-        "]," 
-        "\"href\": \"http://api.cineti.ca/theater/scotia\","
-        "\"name\": \"Banque Scotia (Paramount)\","
-        "\"title\": \"A Nightmare on Elm Street\"}],"
-    "\"plot\": \"I am a plot summary\","
-    "\"title\": \"Movie Title Goes Here\""
+    NSString *json = @"{\"title\": \"Movie Title Goes Here\","
+        "\"href\": \"http://example.com/poster.jpg\","
+        "\"thumbnail\": \"http://example.com/poster_thumb.jpg\""
     "}";
     NSDictionary *rawMovie = [json JSONValue];
     CinetiMovie *movie = [CinetiMovie movieFromRawMovie:rawMovie];

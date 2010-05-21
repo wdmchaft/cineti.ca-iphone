@@ -10,8 +10,7 @@
 
 
 @interface CinetiMovie : CinetiJSONObject {
-    NSString *_posterURL;
-    NSString *_posterThumbURL;
+
 }
 
 + movieFromRawMovie:(NSDictionary *)rawMovie;
