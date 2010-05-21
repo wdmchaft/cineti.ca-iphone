@@ -7,12 +7,17 @@
 //
 
 #import "LogicTestCase.h"
+
 #import "CinetiMovie.h"
+#import "CinetiPhotoSource.h"
+#import "CinetiMoviePoster.h"
+
 #import "NSString+SBJSON.h"
 
 @implementation LogicTestCase
 
 #define NVPassEq(a, b) STAssertEquals((a), (b), @"[%@] == [%@]", (a), (b))
+#define NVPassIntEq(a, b) STAssertEquals((a), (b), @"[%d] == [%d]", (a), (b))
 #define NVPassStrEq(a, b) STAssertTrue([(a) isEqualToString:(b)], @"[%@] == [%@]", (a), (b))
 
 - (void) testFail {
@@ -43,6 +48,22 @@
     NVPassStrEq(movie.title, @"Movie Title Goes Here");
     NVPassStrEq(movie.posterURL, @"http://example.com/poster.jpg");
     NVPassStrEq(movie.posterThumbURL, @"http://example.com/poster_thumb.jpg");
+
+    CinetiPhotoSource *photoSource = [[[CinetiPhotoSource alloc] init] autorelease];
+    NVPassEq([photoSource numberOfPhotos], 0);
+    NVPassEq([photoSource maxPhotoIndex], -1);
+    
+    [photoSource addMovie:movie];
+    NVPassEq([photoSource numberOfPhotos], 1);
+    NVPassEq([photoSource maxPhotoIndex], 0);
+    
+    CinetiMoviePoster *poster = [photoSource photoAtIndex:0];
+    NVPassEq([poster photoSource], photoSource);
+    NVPassIntEq([poster index], 0);
+    NVPassStrEq([poster URLForVersion:TTPhotoVersionThumbnail], @"http://example.com/poster_thumb.jpg");
+    NVPassStrEq([poster URLForVersion:TTPhotoVersionSmall], @"http://example.com/poster_thumb.jpg");
+    NVPassStrEq([poster URLForVersion:TTPhotoVersionMedium], @"http://example.com/poster.jpg");
+    NVPassStrEq([poster URLForVersion:TTPhotoVersionLarge], @"http://example.com/poster.jpg");
 }
 
 @end

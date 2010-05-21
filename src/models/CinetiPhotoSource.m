@@ -8,6 +8,7 @@
 
 #import "CinetiPhotoSource.h"
 #import "CinetiMoviePoster.h"
+#import "CinetiMovie.h"
 
 @implementation CinetiPhotoSource
 
@@ -27,18 +28,9 @@
 
 - (void)addMovie:(CinetiMovie *)movie
 {
-    NSString *URL = nil;
-    NSString *thumbURL = nil;
-    NSArray *posterInfo = [movie valueForKey:@"posters"];
-    for (id posterType in posterInfo)
-    {
-        if ([posterType valueForKey:@"size"] == @"large")
-            URL = [posterType valueForKey:@"href"];
-        if ([posterType valueForKey:@"size"] == @"small")
-            thumbURL = [posterType valueForKey:@"href"];
-    }
-    NSString *title = [movie valueForKey:@"title"];
-    CinetiMoviePoster *poster = [CinetiMoviePoster moviePosterWithURL:URL withThumbURL:thumbURL withTitle:title];
+    CinetiMoviePoster *poster = [CinetiMoviePoster moviePosterWithURL:movie.posterURL 
+                                                         withThumbURL:movie.posterThumbURL 
+                                                            withTitle:movie.title];
     poster.photoSource = self;
     poster.index = [self numberOfPhotos];
     [_photos addObject:poster];
@@ -50,19 +42,19 @@
 
 - (NSInteger)numberOfPhotos
 {
-    NSLog(@"CinetiPhotoSource: numberOfPhotos");
+    //NSLog(@"CinetiPhotoSource: numberOfPhotos");
     return _photos.count;
 }
 
 - (NSInteger)maxPhotoIndex
 {
-    NSLog(@"CinetiPhotoSource: maxPhotoIndex (%d)", [_photos count] - 1);
+    //NSLog(@"CinetiPhotoSource: maxPhotoIndex (%d)", [_photos count] - 1);
     return _photos.count - 1;
 }
 
 - (id<TTPhoto>)photoAtIndex:(NSInteger)index
 {
-    NSLog(@"CinetiPhotoSource: photoAtIndex %d", index);
+    //NSLog(@"CinetiPhotoSource: photoAtIndex %d", index);
     if (index < 0 || index > [self maxPhotoIndex])
         return nil;
     

@@ -40,7 +40,7 @@
 
 - (NSString *)URLForVersion:(TTPhotoVersion)version
 {
-    NSLog(@"CinetiMoviePoster: URLForVersion(%d)", version);
+    //NSLog(@"CinetiMoviePoster: URLForVersion(%d)", version);
     if (version == TTPhotoVersionThumbnail)
         return thumbURL;
     else if (version == TTPhotoVersionSmall)
