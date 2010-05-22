@@ -20,12 +20,11 @@
 }
 
 - (NSString *)posterURL {
-    return (NSString *)[self valueForKey:@"href"];
+    return (NSString *)[self valueForKey:@"thumbnail"];
 }
 
 - (NSString *)posterThumbURL {
-    NSString *thumbURL = (NSString *)[self valueForKey:@"thumbnail"];
-    return thumbURL == nil ? self.posterURL : thumbURL;
+    return (NSString *)[self valueForKey:@"thumbnail"];
 }
 
 @end

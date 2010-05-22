@@ -43,17 +43,14 @@
 
 - (NSString *)URLForVersion:(TTPhotoVersion)version
 {
-    //NSLog(@"CinetiMoviePoster: URLForVersion(%d)", version);
-    if (version == TTPhotoVersionThumbnail)
-        return thumbURL;
-    else if (version == TTPhotoVersionSmall)
-        return thumbURL;
-    else if (version == TTPhotoVersionMedium)
-        return fullURL;
-    else if (version == TTPhotoVersionLarge)
-        return fullURL;
-    else
-        return nil;
+    NSString *url = nil;
+    if (version == TTPhotoVersionThumbnail || version == TTPhotoVersionSmall)
+        url = thumbURL;
+    else if (version == TTPhotoVersionMedium || version == TTPhotoVersionLarge)
+        url = fullURL == nil ? thumbURL : fullURL;
+    
+    //NSLog(@"CinetiMoviePoster: URLForVersion(%d)=%@", version, url);
+    return url;
 }
 
 @end

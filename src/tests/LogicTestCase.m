@@ -27,14 +27,14 @@
 - (void)testMovieAttributes {
     //NSDictionary *rawMovie = [NSDictionary dictionaryWithObjectsAndKeys:
     NSString *json = @"{\"title\": \"Movie Title Goes Here\","
-        "\"href\": \"http://example.com/poster.jpg\","
+        "\"href\": \"http://example.com/poster\","
         "\"thumbnail\": \"http://example.com/poster_thumb.jpg\""
     "}";
     NSDictionary *rawMovie = [json JSONValue];
     CinetiMovie *movie = [CinetiMovie movieFromRawMovie:rawMovie];
     
     NVPassStrEq(movie.title, @"Movie Title Goes Here");
-    NVPassStrEq(movie.posterURL, @"http://example.com/poster.jpg");
+    NVPassStrEq(movie.posterURL, @"http://example.com/poster_thumb.jpg");
     NVPassStrEq(movie.posterThumbURL, @"http://example.com/poster_thumb.jpg");
 
     CinetiPhotoSource *photoSource = [[[CinetiPhotoSource alloc] init] autorelease];
@@ -48,10 +48,12 @@
     CinetiMoviePoster *poster = [photoSource photoAtIndex:0];
     NVPassEq([poster photoSource], photoSource);
     NVPassIntEq([poster index], 0);
+
     NVPassStrEq([poster URLForVersion:TTPhotoVersionThumbnail], @"http://example.com/poster_thumb.jpg");
     NVPassStrEq([poster URLForVersion:TTPhotoVersionSmall], @"http://example.com/poster_thumb.jpg");
-    NVPassStrEq([poster URLForVersion:TTPhotoVersionMedium], @"http://example.com/poster.jpg");
-    NVPassStrEq([poster URLForVersion:TTPhotoVersionLarge], @"http://example.com/poster.jpg");
+    NVPassStrEq([poster URLForVersion:TTPhotoVersionMedium], @"http://example.com/poster_thumb.jpg");
+    NVPassStrEq([poster URLForVersion:TTPhotoVersionLarge], @"http://example.com/poster_thumb.jpg");
+
 }
 
 @end
