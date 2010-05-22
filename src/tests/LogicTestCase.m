@@ -41,6 +41,11 @@
     NVPassEq([photoSource numberOfPhotos], 0);
     NVPassEq([photoSource maxPhotoIndex], -1);
     
+    CinetiMovie *emptyMovie = [[[CinetiMovie alloc] init] autorelease];
+    [photoSource addMovie:emptyMovie];
+    NVPassEq([photoSource numberOfPhotos], 0);
+    NVPassEq([photoSource maxPhotoIndex], -1);
+    
     [photoSource addMovie:movie];
     NVPassEq([photoSource numberOfPhotos], 1);
     NVPassEq([photoSource maxPhotoIndex], 0);

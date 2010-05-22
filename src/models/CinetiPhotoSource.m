@@ -28,6 +28,9 @@
 
 - (void)addMovie:(CinetiMovie *)movie
 {
+    if (movie.posterThumbURL == nil)
+        return;
+    
     CinetiMoviePoster *poster = [CinetiMoviePoster moviePosterWithURL:movie.posterURL 
                                                          withThumbURL:movie.posterThumbURL 
                                                             withTitle:movie.title];
