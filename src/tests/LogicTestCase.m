@@ -56,8 +56,8 @@
 
     NVPassStrEq([poster URLForVersion:TTPhotoVersionThumbnail], @"http://example.com/poster_thumb.jpg");
     NVPassStrEq([poster URLForVersion:TTPhotoVersionSmall], @"http://example.com/poster_thumb.jpg");
-    NVPassStrEq([poster URLForVersion:TTPhotoVersionMedium], @"http://example.com/poster_thumb.jpg");
-    NVPassStrEq([poster URLForVersion:TTPhotoVersionLarge], @"http://example.com/poster_thumb.jpg");
+    NVPassStrEq([poster URLForVersion:TTPhotoVersionMedium], @"http://example.com/poster.jpg");
+    NVPassStrEq([poster URLForVersion:TTPhotoVersionLarge], @"http://example.com/poster.jpg");
 
 }
 

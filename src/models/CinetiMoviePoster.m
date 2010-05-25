@@ -47,7 +47,10 @@
     if (version == TTPhotoVersionThumbnail || version == TTPhotoVersionSmall)
         url = thumbURL;
     else if (version == TTPhotoVersionMedium || version == TTPhotoVersionLarge)
-        url = fullURL == nil ? thumbURL : fullURL;
+    {
+        // FIXME: We should get the real URL from the movie details JSON
+        url = [thumbURL stringByReplacingOccurrencesOfString:@"_thumb.jpg" withString:@".jpg"];
+    }
     
     //NSLog(@"CinetiMoviePoster: URLForVersion(%d)=%@", version, url);
     return url;
