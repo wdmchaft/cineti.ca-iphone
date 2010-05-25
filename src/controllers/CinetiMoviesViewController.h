@@ -7,7 +7,6 @@
 //
 
 #import "CinetiMoviesRequestDelegate.h"
-#import "CinetiPhotoSource.h"
 #import "Three20/Three20.h"
 
 @interface CinetiMoviesViewController : TTThumbsViewController <CinetiMoviesRequestDelegate> {

@@ -7,6 +7,7 @@
 //
 
 #import "CinetiTheatresViewController.h"
+#import "Three20/Three20.h"
 
 
 @implementation CinetiTheatresViewController
@@ -23,18 +24,17 @@
     return [self initWithNibName:nil bundle:nil];
 }
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.dataSource = [TTListDataSource dataSourceWithObjects:
+                        [TTTableTextItem itemWithText:@"Cinema du Parc"], 
+                        [TTTableTextItem itemWithText:@"Cinema Scotia"],
+                        [TTTableTextItem itemWithText:@"AMC"],
+                        [TTTableTextItem itemWithText:@"Cinema Quartier Latin"],
+                        nil];
 }
-*/
 
 /*
 // Override to allow orientations other than the default portrait orientation.
