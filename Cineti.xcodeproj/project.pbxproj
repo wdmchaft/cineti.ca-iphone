@@ -28,6 +28,7 @@
 		6E9A403D11A5E47F00BF0CC5 /* CinetiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* CinetiAppDelegate.m */; };
 		6E9A403E11A5E4AB00BF0CC5 /* CinetiMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D75C117F8908002B0C96 /* CinetiMoviesViewController.m */; };
 		6E9A404211A5E4FA00BF0CC5 /* CinetiTheatresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D78E117F8BDA002B0C96 /* CinetiTheatresViewController.m */; };
+		6E9A425911AC4FDD00BF0CC5 /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6E9A425811AC4FDD00BF0CC5 /* Three20.bundle */; };
 		6EB5DF3C11A2764700F3847F /* LogicTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5DF3B11A2764700F3847F /* LogicTestCase.m */; };
 		6EB5E01411A3B2A300F3847F /* CinetiPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E01311A3B2A300F3847F /* CinetiPhotoSource.m */; };
 		DB4390CB1180A01C008D4114 /* NSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4390231180A01B008D4114 /* NSArrayAdditions.m */; };
@@ -471,6 +472,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E9A3D0011A48E7D00BF0CC5 /* CinetiMoviePoster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiMoviePoster.h; sourceTree = "<group>"; };
 		6E9A3D0111A48E7D00BF0CC5 /* CinetiMoviePoster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiMoviePoster.m; sourceTree = "<group>"; };
+		6E9A425811AC4FDD00BF0CC5 /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Three20.bundle; path = "third-party/three20/src/Three20.bundle"; sourceTree = "<group>"; };
 		6E9FB67411864104004E6274 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB5DF3A11A2764700F3847F /* LogicTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicTestCase.h; sourceTree = "<group>"; };
 		6EB5DF3B11A2764700F3847F /* LogicTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogicTestCase.m; sourceTree = "<group>"; };
@@ -1413,6 +1415,7 @@
 		DBF7D6FA117F586D002B0C96 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				6E9A425811AC4FDD00BF0CC5 /* Three20.bundle */,
 				DBF7D720117F5B2E002B0C96 /* Prefix.pch */,
 			);
 			name = Other;
@@ -1774,6 +1777,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBF7D71D117F5AAD002B0C96 /* CinetiTheatresView.xib in Resources */,
+				6E9A425911AC4FDD00BF0CC5 /* Three20.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
