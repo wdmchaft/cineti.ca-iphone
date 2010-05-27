@@ -12,6 +12,10 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
+		6E361F9011AE246E00EE956A /* CinetiTheatresDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E361F8F11AE246E00EE956A /* CinetiTheatresDataSource.m */; };
+		6E361FB211AE26EA00EE956A /* CinetiTheatresModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E361FB111AE26EA00EE956A /* CinetiTheatresModel.m */; };
+		6E361FBB11AE283D00EE956A /* CinetiTheatresDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E361F8F11AE246E00EE956A /* CinetiTheatresDataSource.m */; };
+		6E361FBC11AE283D00EE956A /* CinetiTheatresModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E361FB111AE26EA00EE956A /* CinetiTheatresModel.m */; };
 		6E9A3D0211A48E7D00BF0CC5 /* CinetiMoviePoster.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A3D0111A48E7D00BF0CC5 /* CinetiMoviePoster.m */; };
 		6E9A3F5C11A5D5DD00BF0CC5 /* libjson-framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF7D855117FA276002B0C96 /* libjson-framework.a */; };
 		6E9A3F5D11A5D5E800BF0CC5 /* libthree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43901C11809FBF008D4114 /* libthree20.a */; };
@@ -469,6 +473,10 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6E361F8E11AE246E00EE956A /* CinetiTheatresDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiTheatresDataSource.h; sourceTree = "<group>"; };
+		6E361F8F11AE246E00EE956A /* CinetiTheatresDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiTheatresDataSource.m; sourceTree = "<group>"; };
+		6E361FB011AE26EA00EE956A /* CinetiTheatresModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiTheatresModel.h; sourceTree = "<group>"; };
+		6E361FB111AE26EA00EE956A /* CinetiTheatresModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiTheatresModel.m; sourceTree = "<group>"; };
 		6E9A3D0011A48E7D00BF0CC5 /* CinetiMoviePoster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiMoviePoster.h; sourceTree = "<group>"; };
 		6E9A3D0111A48E7D00BF0CC5 /* CinetiMoviePoster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiMoviePoster.m; sourceTree = "<group>"; };
 		6E9A425811AC4FDD00BF0CC5 /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Three20.bundle; path = "third-party/three20/src/Three20.bundle"; sourceTree = "<group>"; };
@@ -1384,6 +1392,10 @@
 				6EB5E01311A3B2A300F3847F /* CinetiPhotoSource.m */,
 				6E9A3D0011A48E7D00BF0CC5 /* CinetiMoviePoster.h */,
 				6E9A3D0111A48E7D00BF0CC5 /* CinetiMoviePoster.m */,
+				6E361F8E11AE246E00EE956A /* CinetiTheatresDataSource.h */,
+				6E361F8F11AE246E00EE956A /* CinetiTheatresDataSource.m */,
+				6E361FB011AE26EA00EE956A /* CinetiTheatresModel.h */,
+				6E361FB111AE26EA00EE956A /* CinetiTheatresModel.m */,
 			);
 			name = Models;
 			path = src/models;
@@ -1817,6 +1829,8 @@
 				DB4393141180A670008D4114 /* CinetiMoviesRequest.m in Sources */,
 				6EB5E01411A3B2A300F3847F /* CinetiPhotoSource.m in Sources */,
 				6E9A3D0211A48E7D00BF0CC5 /* CinetiMoviePoster.m in Sources */,
+				6E361F9011AE246E00EE956A /* CinetiTheatresDataSource.m in Sources */,
+				6E361FB211AE26EA00EE956A /* CinetiTheatresModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1824,6 +1838,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E361FBB11AE283D00EE956A /* CinetiTheatresDataSource.m in Sources */,
+				6E361FBC11AE283D00EE956A /* CinetiTheatresModel.m in Sources */,
 				6E9A403D11A5E47F00BF0CC5 /* CinetiAppDelegate.m in Sources */,
 				6E9A403E11A5E4AB00BF0CC5 /* CinetiMoviesViewController.m in Sources */,
 				6E9A404211A5E4FA00BF0CC5 /* CinetiTheatresViewController.m in Sources */,

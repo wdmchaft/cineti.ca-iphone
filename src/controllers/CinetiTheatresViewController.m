@@ -7,6 +7,7 @@
 //
 
 #import "CinetiTheatresViewController.h"
+#import "CinetiTheatresDataSource.h"
 #import "Three20/Three20.h"
 
 
@@ -24,25 +25,15 @@
     return [self initWithNibName:nil bundle:nil];
 }
 
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    self.dataSource = [TTListDataSource dataSourceWithObjects:
-                        [TTTableTextItem itemWithText:@"Cinema du Parc"], 
-                        [TTTableTextItem itemWithText:@"Cinema Scotia"],
-                        [TTTableTextItem itemWithText:@"AMC"],
-                        [TTTableTextItem itemWithText:@"Cinema Quartier Latin"],
-                        nil];
+    NSLog(@"CinetiTheatresViewController: viewDidLoad");
+    [self createModel];
 }
 
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+- (void)createModel {
+    NSLog(@"CinetiTheatresViewController: createModel");
+    self.dataSource = [[[CinetiTheatresDataSource alloc] init] autorelease];
 }
-*/
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
