@@ -30,7 +30,6 @@
     [super dealloc];
 }
 
-/*
 - (void)load:(TTURLRequestCachePolicy)cachePolicy more:(BOOL)more
 {
     NSLog(@"CinetiTheatresModel: load");
@@ -38,6 +37,7 @@
     if (!self.isLoading) {
         NSString *url = @"http://api.cineti.ca/theaters.json";
         TTURLRequest *request = [TTURLRequest requestWithURL:url delegate:self];
+        request.cachePolicy = cachePolicy;
         
         id<TTURLResponse> response = [[TTURLDataResponse alloc] init];
         request.response = response;
@@ -66,6 +66,5 @@
     
     [super requestDidFinishLoad:request];
 }
-*/
 
 @end

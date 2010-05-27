@@ -29,6 +29,11 @@
     [super dealloc];
 }
 
+- (id)model
+{
+    return _theatresmodel;
+}
+
 - (void)tableViewDidLoadModel:(UITableView *)tableView
 {
     NSLog(@"CinetiTheatresDataSource: tableViewDidLoadModel");
@@ -36,7 +41,7 @@
     NSMutableArray *theatreNames = [[[NSMutableArray alloc] init] autorelease];
     for (NSString *theatreName in _theatresmodel.theatreNames)
     {
-        NSLog(@"Found theatre: %@", theatreName);
+        //NSLog(@"Found theatre: %@", theatreName);
         [theatreNames addObject:[TTTableTextItem itemWithText:theatreName]];
     }
     
