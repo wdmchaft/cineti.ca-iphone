@@ -9,6 +9,7 @@
 #import "CinetiAppDelegate.h"
 #import "CinetiMoviesViewController.h"
 #import "CinetiTheatresViewController.h"
+#import "CinetiTabBarController.h"
 
 @implementation CinetiAppDelegate
 
@@ -16,26 +17,22 @@
 @synthesize tabBarController;
 
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {
+- (void)applicationDidFinishLaunching:(UIApplication *)application {   
+    TTNavigator *navigator = [TTNavigator navigator];
+    navigator.persistenceMode = TTNavigatorPersistenceModeAll;
+    navigator.window = [[[UIWindow alloc] initWithFrame:TTScreenBounds()] autorelease];
     
-    window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    TTURLMap *map = navigator.URLMap;
     
-    tabBarController = [[UITabBarController alloc] init];
+    [map from:@"http://api.cineti.ca" toSharedViewController:[CinetiTabBarController class]];
+    [map from:@"http://api.cineti.ca/movies" toSharedViewController:[CinetiMoviesViewController class]];
+    [map from:@"http://api.cineti.ca/theatres" toSharedViewController:[CinetiTheatresViewController class]];
+
+    if (![navigator restoreViewControllers]) {
+        // This is the first launch, so we just start with the tab bar
+        [navigator openURLAction:[TTURLAction actionWithURLPath:@"http://api.cineti.ca"]];
+    }
     
-    // Create the controllers that will go in the tabs
-    CinetiMoviesViewController *movies = [[[CinetiMoviesViewController alloc] init] autorelease];
-    CinetiTheatresViewController *theatres = [[[CinetiTheatresViewController alloc] init] autorelease];
-    
-    // Add the tabs to the tab bar controller
-    [tabBarController setViewControllers:
-     [NSArray arrayWithObjects:
-      [[[UINavigationController alloc] initWithRootViewController:movies] autorelease], 
-      [[[UINavigationController alloc] initWithRootViewController:theatres] autorelease],
-      nil]];
-    
-    // Add the tab bar controller's current view as a subview of the window
-    [window addSubview:tabBarController.view];
-    [window makeKeyAndVisible];
 }
 
 
