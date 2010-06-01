@@ -43,7 +43,7 @@
     for (NSString *theatreName in _theatresmodel.theatreNames)
     {
         //NSLog(@"Found theatre: %@", theatreName);
-        [theatreNames addObject:[TTTableTextItem itemWithText:theatreName]];
+        [theatreNames addObject:[TTTableTextItem itemWithText:theatreName URL:@"http://api.cineti.ca/theater/amc"]];
     }
     
     self.items = theatreNames;

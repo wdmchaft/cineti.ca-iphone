@@ -9,6 +9,7 @@
 #import "CinetiAppDelegate.h"
 #import "CinetiMoviesViewController.h"
 #import "CinetiTheatresViewController.h"
+#import "CinetiTheatreViewController.h"
 #import "CinetiTabBarController.h"
 
 @implementation CinetiAppDelegate
@@ -27,6 +28,7 @@
     [map from:@"http://api.cineti.ca" toSharedViewController:[CinetiTabBarController class]];
     [map from:@"http://api.cineti.ca/movies" toSharedViewController:[CinetiMoviesViewController class]];
     [map from:@"http://api.cineti.ca/theaters" toSharedViewController:[CinetiTheatresViewController class]];
+    [map from:@"http://api.cineti.ca/theater/amc" toViewController:[CinetiTheatreViewController class]];
 
     if (![navigator restoreViewControllers]) {
         // This is the first launch, so we just start with the tab bar

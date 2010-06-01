@@ -37,6 +37,8 @@
 		6E9A425911AC4FDD00BF0CC5 /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6E9A425811AC4FDD00BF0CC5 /* Three20.bundle */; };
 		6EB5DF3C11A2764700F3847F /* LogicTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5DF3B11A2764700F3847F /* LogicTestCase.m */; };
 		6EB5E01411A3B2A300F3847F /* CinetiPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E01311A3B2A300F3847F /* CinetiPhotoSource.m */; };
+		6ECA8C7911B4CFD300729241 /* CinetiTheatreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA8C7811B4CFD300729241 /* CinetiTheatreViewController.m */; };
+		6ECA8C9011B4D1F700729241 /* CinetiTheatreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA8C7811B4CFD300729241 /* CinetiTheatreViewController.m */; };
 		DB4390CB1180A01C008D4114 /* NSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4390231180A01B008D4114 /* NSArrayAdditions.m */; };
 		DB4390CC1180A01C008D4114 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4390241180A01B008D4114 /* NSDataAdditions.m */; };
 		DB4390CD1180A01C008D4114 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4390251180A01B008D4114 /* NSDateAdditions.m */; };
@@ -489,6 +491,8 @@
 		6EB5DF3B11A2764700F3847F /* LogicTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogicTestCase.m; sourceTree = "<group>"; };
 		6EB5E01211A3B2A300F3847F /* CinetiPhotoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiPhotoSource.h; sourceTree = "<group>"; };
 		6EB5E01311A3B2A300F3847F /* CinetiPhotoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiPhotoSource.m; sourceTree = "<group>"; };
+		6ECA8C7711B4CFD300729241 /* CinetiTheatreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiTheatreViewController.h; sourceTree = "<group>"; };
+		6ECA8C7811B4CFD300729241 /* CinetiTheatreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiTheatreViewController.m; sourceTree = "<group>"; };
 		DB43901C11809FBF008D4114 /* libthree20.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libthree20.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4390231180A01B008D4114 /* NSArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSArrayAdditions.m; path = "third-party/three20/src/NSArrayAdditions.m"; sourceTree = "<group>"; };
 		DB4390241180A01B008D4114 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDataAdditions.m; path = "third-party/three20/src/NSDataAdditions.m"; sourceTree = "<group>"; };
@@ -1420,6 +1424,8 @@
 				DBF7D75C117F8908002B0C96 /* CinetiMoviesViewController.m */,
 				DBF7D78D117F8BDA002B0C96 /* CinetiTheatresViewController.h */,
 				DBF7D78E117F8BDA002B0C96 /* CinetiTheatresViewController.m */,
+				6ECA8C7711B4CFD300729241 /* CinetiTheatreViewController.h */,
+				6ECA8C7811B4CFD300729241 /* CinetiTheatreViewController.m */,
 				6E3621A011B078CC00EE956A /* CinetiTabBarController.h */,
 				6E3621A111B078CC00EE956A /* CinetiTabBarController.m */,
 			);
@@ -1838,6 +1844,7 @@
 				6E361F9011AE246E00EE956A /* CinetiTheatresDataSource.m in Sources */,
 				6E361FB211AE26EA00EE956A /* CinetiTheatresModel.m in Sources */,
 				6E3621A211B078CC00EE956A /* CinetiTabBarController.m in Sources */,
+				6ECA8C7911B4CFD300729241 /* CinetiTheatreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1845,6 +1852,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ECA8C9011B4D1F700729241 /* CinetiTheatreViewController.m in Sources */,
 				6E3621D411B07BBD00EE956A /* CinetiTabBarController.m in Sources */,
 				6E361FBB11AE283D00EE956A /* CinetiTheatresDataSource.m in Sources */,
 				6E361FBC11AE283D00EE956A /* CinetiTheatresModel.m in Sources */,
