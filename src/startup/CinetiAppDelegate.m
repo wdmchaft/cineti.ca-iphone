@@ -26,7 +26,7 @@
     
     [map from:@"http://api.cineti.ca" toSharedViewController:[CinetiTabBarController class]];
     [map from:@"http://api.cineti.ca/movies" toSharedViewController:[CinetiMoviesViewController class]];
-    [map from:@"http://api.cineti.ca/theatres" toSharedViewController:[CinetiTheatresViewController class]];
+    [map from:@"http://api.cineti.ca/theaters" toSharedViewController:[CinetiTheatresViewController class]];
 
     if (![navigator restoreViewControllers]) {
         // This is the first launch, so we just start with the tab bar

@@ -15,7 +15,7 @@
 {
     [self setTabURLs:[NSArray arrayWithObjects:
                       @"http://api.cineti.ca/movies",
-                      @"http://api.cineti.ca/theatres",
+                      @"http://api.cineti.ca/theaters",
                       nil]];
 }
 
