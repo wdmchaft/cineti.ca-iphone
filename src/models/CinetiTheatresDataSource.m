@@ -24,6 +24,7 @@
 
 - (void)dealloc
 {
+    NSLog(@"CinetiTheatresDataSource: dealloc");
     [_theatresmodel release];
     
     [super dealloc];

@@ -18,7 +18,7 @@
 {
     NSLog(@"CinetiTheatresModel: init");
     if (self = [super init]) {
-        _theatreNames = [[NSMutableArray arrayWithObjects:@"A Theatre", @"Another Theatre", nil] retain];
+        _theatreNames = nil;
     }
     
     return self;
@@ -26,6 +26,7 @@
 
 - (void)dealloc
 {
+    NSLog(@"CinetiTheatresModel: dealloc");
     [_theatreNames release];
     [super dealloc];
 }
@@ -57,7 +58,7 @@
 	NSObject *object = [jsonString JSONValue];
 
 	NSArray *rawTheatres = (NSArray *)object;
-	NSMutableArray *theatres = [NSMutableArray arrayWithCapacity:[rawTheatres count]];
+	NSMutableArray *theatres = [[NSMutableArray arrayWithCapacity:[rawTheatres count]] retain];
 	for ( NSDictionary *rawTheatre in rawTheatres ) {
 		[theatres addObject:[rawTheatre valueForKey:@"name"]];
 	}
