@@ -7,16 +7,20 @@
 //
 
 #import "CinetiTheatreViewController.h"
+#import "CinetiTheatreDataSource.h"
+#import "CinetiTheatreModel.h"
 #import "Three20/Three20.h"
 
 @implementation CinetiTheatreViewController
 
-- (id) init {
+- (id)init {
     NSLog(@"In CinetiTheatreViewController init");
     if (self = [super init]) {
         //self.variableHeightRows = YES;
         
-        self.dataSource = [TTListDataSource dataSourceWithObjects:[TTTableTextItem itemWithText:@"Table cell item"], nil];
+        id<TTTableViewDataSource> ds = [CinetiTheatreDataSource dataSourceWithItems:nil];
+        ds.model = [[CinetiTheatreModel alloc] initWithTheatreURL:@"http://api.cineti.ca/theater/parc.json"];
+        self.dataSource = ds;
     }
     
     return self;
