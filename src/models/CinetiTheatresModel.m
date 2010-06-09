@@ -12,13 +12,13 @@
 
 @implementation CinetiTheatresModel
 
-@synthesize theatreNames = _theatreNames;
+@synthesize theatres = _theatres;
 
 - (id)init
 {
     NSLog(@"CinetiTheatresModel: init");
     if (self = [super init]) {
-        _theatreNames = nil;
+        _theatres = nil;
     }
     
     return self;
@@ -27,7 +27,7 @@
 - (void)dealloc
 {
     NSLog(@"CinetiTheatresModel: dealloc");
-    [_theatreNames release];
+    [_theatres release];
     [super dealloc];
 }
 
@@ -60,10 +60,10 @@
 	NSArray *rawTheatres = (NSArray *)object;
 	NSMutableArray *theatres = [[NSMutableArray arrayWithCapacity:[rawTheatres count]] retain];
 	for ( NSDictionary *rawTheatre in rawTheatres ) {
-		[theatres addObject:[rawTheatre valueForKey:@"name"]];
+		[theatres addObject:rawTheatre];
 	}
     
-    _theatreNames = theatres;
+    _theatres = theatres;
     
     [super requestDidFinishLoad:request];
 }

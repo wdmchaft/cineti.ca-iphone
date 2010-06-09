@@ -11,9 +11,9 @@
 
 
 @interface CinetiTheatresModel : TTURLRequestModel {
-    NSArray *_theatreNames;
+    NSArray *_theatres;
 }
 
-@property (nonatomic, readonly) NSArray *theatreNames;
+@property (nonatomic, readonly) NSArray *theatres;
 
 @end

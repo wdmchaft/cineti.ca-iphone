@@ -40,10 +40,10 @@
     NSLog(@"CinetiTheatresDataSource: tableViewDidLoadModel");
     
     NSMutableArray *theatreNames = [[[NSMutableArray alloc] init] autorelease];
-    for (NSString *theatreName in _theatresmodel.theatreNames)
+    for (NSDictionary *theatre in _theatresmodel.theatres)
     {
-        //NSLog(@"Found theatre: %@", theatreName);
-        [theatreNames addObject:[TTTableTextItem itemWithText:theatreName URL:@"http://api.cineti.ca/theater/amc"]];
+        NSLog(@"Found theatre: %@, url %@", [theatre objectForKey:@"name"], [theatre objectForKey:@"href"]);
+        [theatreNames addObject:[TTTableTextItem itemWithText:[theatre objectForKey:@"name"] URL:[theatre objectForKey:@"href"]]];
     }
     
     self.items = theatreNames;

@@ -13,13 +13,13 @@
 
 @implementation CinetiTheatreViewController
 
-- (id)init {
-    NSLog(@"In CinetiTheatreViewController init");
+- (id)initWithTheatreName:(NSString *)theatreName {
+    NSLog(@"In CinetiTheatreViewController initWithTheatreName(%@)", theatreName);
     if (self = [super init]) {
         //self.variableHeightRows = YES;
         
         id<TTTableViewDataSource> ds = [CinetiTheatreDataSource dataSourceWithItems:nil];
-        ds.model = [[CinetiTheatreModel alloc] initWithTheatreURL:@"http://api.cineti.ca/theater/parc.json"];
+        ds.model = [[CinetiTheatreModel alloc] initWithTheatreURL:[NSString stringWithFormat:@"%@%@.json", kTheatreBaseUrl, theatreName]];
         self.dataSource = ds;
     }
     

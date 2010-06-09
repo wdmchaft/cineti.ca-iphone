@@ -8,6 +8,8 @@
 
 #import "Three20/Three20.h"
 
+#define kTheatreBaseUrl @"http://api.cineti.ca/theater/"
+
 @interface CinetiTheatreViewController : TTTableViewController {
 
 }
