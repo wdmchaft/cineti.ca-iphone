@@ -8,6 +8,8 @@
 
 #import "CinetiTheatreDataSource.h"
 #import "CinetiTheatreModel.h"
+#import "CinetiTheatreTableItem.h"
+#import "CinetiTheatreTableCell.h"
 
 @implementation CinetiTheatreDataSource
 
@@ -37,18 +39,33 @@
 {
     NSLog(@"CinetiTheatresDataSource: tableViewDidLoadModel");
     
-    NSMutableArray *movieNames = [[[NSMutableArray alloc] init] autorelease];
+    NSMutableArray *movieList = [[[NSMutableArray alloc] init] autorelease];
     for (NSDictionary *movie in ((CinetiTheatreModel *)self.model).movies)
     {
-        //NSLog(@"Found theatre: %@", theatreName);
-        [movieNames addObject:[TTTableTextItem itemWithText:[movie objectForKey:@"title"]]];
+        /*
+        [movieList addObject:[CinetiTheatreTableItem itemWithText:[movie objectForKey:@"title"]
+                                                         subtitle:@"I'm a subtitle"
+                                                         imageURL:@"http://cineti.ca/poster/35951_thumb.jpg"
+                                                              URL:nil]];
+    */
+        [movieList addObject:[CinetiTheatreTableItem itemWithText:[movie objectForKey:@"title"] 
+                                                         imageURL:@"http://cineti.ca/poster/35951_thumb.jpg" 
+                                                              URL:nil]];
     }
     
-    self.items = movieNames;
+    self.items = movieList;
     [super tableViewDidLoadModel:tableView];
 }    
 
 #pragma mark TTTableViewDataSource protocol
+
+- (Class)tableView:(UITableView*)tableView cellClassForObject:(id)object {
+    if ([object isKindOfClass:[CinetiTheatreTableItem class]]) {
+        return [CinetiTheatreTableCell class];
+    } else {
+        return [super tableView:tableView cellClassForObject:object];
+    }
+}
 
 - (UIImage*)imageForEmpty
 {
