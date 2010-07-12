@@ -9,11 +9,8 @@
 #import "Three20/Three20.h"
 
 
-@interface CinetiTheatreTableItem : TTTableTextItem {
-    NSString *_imageURL;
+@interface CinetiTheatreTableItem : TTTableSubtitleItem {
 }
-
-@property (nonatomic, retain) NSString *imageURL;
 
 + (id)itemWithText:(NSString *)text imageURL:(NSString *)imageURL URL:(NSString *)URL;
 

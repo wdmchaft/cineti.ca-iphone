@@ -8,8 +8,7 @@
 
 #import "Three20/Three20.h"
 
-@interface CinetiTheatreTableCell : TTTableLinkedItemCell {
-    TTImageView* _imageView2;
+@interface CinetiTheatreTableCell : TTTableSubtitleItemCell {
 }
 
 @end

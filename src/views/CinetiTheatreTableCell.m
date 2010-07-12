@@ -9,6 +9,8 @@
 #import "CinetiTheatreTableCell.h"
 #import "CinetiTheatreTableItem.h"
 
+#define kImageWidth 95
+#define kImageHeight 140
 
 @implementation CinetiTheatreTableCell
 
@@ -23,10 +25,11 @@
 
 - (void)dealloc
 {
-    [_imageView2 release];
+//    [_imageView2 release];
     [super dealloc];
 }
 
+/*
 - (TTImageView *)imageView2
 {
     if (!_imageView2)
@@ -36,19 +39,24 @@
     }
     return _imageView2;
 }
+ */
 
 #pragma mark TTTableViewCell
 
 + (CGFloat)tableView:(UITableView*)tableView rowHeightForObject:(id)object {
-    /*
-    TTTableSubtitleItem* item = object;
+    CinetiTheatreTableItem* item = object;
     
     CGFloat height = TTSTYLEVAR(tableFont).ttLineHeight + kTableCellVPadding*2;
     if (item.subtitle) {
         height += TTSTYLEVAR(font).ttLineHeight;
     }
-    */
-    return 160;
+    
+    if (item.imageURL) {
+        CGFloat imageHeight = kImageHeight + 2*kTableCellSmallMargin;
+        if (height < imageHeight)
+            height = imageHeight;
+    }
+    return height;
 }
 
 - (void)setObject:(id)object
@@ -71,7 +79,7 @@
     [super layoutSubviews];
     CGFloat textLeftMargin = 0;
     
-    if (_imageView2) {
+    if (self.imageView2) {
         TTStyle *style = 
          [TTShapeStyle styleWithShape:[TTRectangleShape shape] next:
          [TTSolidBorderStyle styleWithColor:[UIColor colorWithWhite:0.86 alpha:1] width:1 next:
@@ -84,15 +92,15 @@
                                     next:nil
              ]]]]];
         
-        _imageView2.frame = CGRectMake(kTableCellSmallMargin, kTableCellSmallMargin, 95, 140);
-        [_imageView2 setStyle:style];
+        self.imageView2.frame = CGRectMake(kTableCellSmallMargin, kTableCellSmallMargin, kImageWidth, kImageHeight);
+        [self.imageView2 setStyle:style];
         
-        textLeftMargin = _imageView2.right + kTableCellSmallMargin;
+        textLeftMargin = self.imageView2.right + kTableCellSmallMargin;
     }
     else
         textLeftMargin = kTableCellHPadding;
     
-    CGFloat textWidth = self.contentView.width - (_imageView2.width + 2*kTableCellSmallMargin);
+    CGFloat textWidth = self.contentView.width - (self.imageView2.width + 2*kTableCellSmallMargin);
     self.textLabel.frame = CGRectMake(textLeftMargin, 0, textWidth, self.textLabel.font.ttLineHeight);
     self.detailTextLabel.frame = CGRectMake(textLeftMargin, self.textLabel.bottom, textWidth, self.detailTextLabel.font.ttLineHeight);
 }
