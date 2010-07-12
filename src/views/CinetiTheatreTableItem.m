@@ -15,7 +15,7 @@
 
 + (id)itemWithText:(NSString*)text imageURL:(NSString*)imageURL URL:(NSString*)URL 
 {
-    NSLog(@"CinetiTheatreTableItem itemWithText:%@ URL:%@", text, URL);
+    NSLog(@"CinetiTheatreTableItem itemWithText:%@ imageURL: %@ URL:%@", text, imageURL, URL);
     CinetiTheatreTableItem* item = [[[self alloc] init] autorelease];
     item.text = text;
     item.imageURL = imageURL;
