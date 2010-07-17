@@ -11,11 +11,11 @@
 
 @interface CinetiTheatreModel : TTURLRequestModel {
     NSString *_theatreUrl;
-    NSArray *_movies;
+    NSMutableArray *_movies;
 }
 
 - (id) initWithTheatreURL:(NSString *)url;
 
-@property (nonatomic, readonly) NSArray *movies;
+@property (nonatomic, readonly) NSMutableArray *movies;
 
 @end

@@ -39,15 +39,7 @@
 {
     NSLog(@"CinetiTheatresDataSource: tableViewDidLoadModel");
     
-    NSMutableArray *movieList = [[[NSMutableArray alloc] init] autorelease];
-    for (NSDictionary *movie in ((CinetiTheatreModel *)self.model).movies)
-    {
-        [movieList addObject:[CinetiTheatreTableItem itemWithText:[movie objectForKey:@"title"] 
-                                                         imageURL:[movie objectForKey:@"thumbnail"]
-                                                              URL:nil]];
-    }
-    
-    self.items = movieList;
+    self.items = ((CinetiTheatreModel *)self.model).movies;
     [super tableViewDidLoadModel:tableView];
 }    
 

@@ -7,6 +7,7 @@
 //
 
 #import "CinetiTheatreModel.h"
+#import "CinetiTheatreTableItem.h"
 #import "NSString+SBJSON.h"
 
 @implementation CinetiTheatreModel
@@ -18,6 +19,7 @@
     if (self = [super init])
     {
         _theatreUrl = [[NSString stringWithString:url] retain];
+        _movies = nil;
     }
     NSLog(@"CinetiTheatreModel: initWithTheatreURL(%@), self=%p", _theatreUrl, self);
     return self;
@@ -27,6 +29,7 @@
 {
     NSLog(@"CinetiTheatreModel: dealloc");
     [_theatreUrl release];
+    [_movies release];
     [super dealloc];
 }
 
@@ -54,15 +57,18 @@
     // Parse response
 	NSString *jsonString = [[[NSString alloc] initWithData:response.data encoding:NSUTF8StringEncoding] autorelease];
 	NSObject *object = [jsonString JSONValue];
-
-/*
-	NSArray *rawMovies = [(NSDictionary *)object objectForKey:@"movies"];
-    //	NSMutableArray *movies = [[NSMutableArray arrayWithCapacity:[rawMovies count]] retain];
-	for (NSDictionary *rawMovie in rawMovies) {
-        NSLog(@"Got movie %@", [rawMovie objectForKey:@"title"]);
-	}
-*/
-    _movies = [(NSDictionary *)object objectForKey:@"movies"];
+    
+    NSArray *rawMovies = [(NSDictionary *)object objectForKey:@"movies"];
+    [_movies release];
+    _movies = [NSMutableArray arrayWithCapacity:[rawMovies count]];
+    for (NSDictionary *movie in rawMovies)
+    {
+        NSLog(@"Got movie %@, thumbnail %@", [movie objectForKey:@"title"]);
+        [_movies addObject:[CinetiTheatreTableItem itemWithText:[movie objectForKey:@"title"] 
+                                                       imageURL:[movie objectForKey:@"thumbnail"]
+                                                            URL:nil]];
+    }
+    
     [super requestDidFinishLoad:request];
 }
 
