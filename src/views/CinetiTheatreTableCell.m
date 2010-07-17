@@ -25,21 +25,9 @@
 
 - (void)dealloc
 {
-//    [_imageView2 release];
     [super dealloc];
 }
 
-/*
-- (TTImageView *)imageView2
-{
-    if (!_imageView2)
-    {
-        _imageView2 = [[TTImageView alloc] init];
-        [self.contentView addSubview:_imageView2];
-    }
-    return _imageView2;
-}
- */
 
 #pragma mark TTTableViewCell
 
@@ -48,7 +36,7 @@
     
     CGFloat height = TTSTYLEVAR(tableFont).ttLineHeight + kTableCellVPadding*2;
     if (item.subtitle) {
-        height += TTSTYLEVAR(font).ttLineHeight;
+        height += TTSTYLEVAR(font).ttLineHeight + kTableCellVPadding;
     }
     
     if (item.imageURL) {
@@ -79,7 +67,7 @@
     [super layoutSubviews];
     CGFloat textLeftMargin = 0;
     
-    if (self.imageView2) {
+    if (self.imageView2.urlPath != nil) {
         TTStyle *style = 
          [TTShapeStyle styleWithShape:[TTRectangleShape shape] next:
          [TTSolidBorderStyle styleWithColor:[UIColor colorWithWhite:0.86 alpha:1] width:1 next:
@@ -96,9 +84,13 @@
         [self.imageView2 setStyle:style];
         
         textLeftMargin = self.imageView2.right + kTableCellSmallMargin;
-    }
-    else
+        if (self.imageView2.superview == nil)
+            [self.contentView addSubview:self.imageView2];
+    } else {
         textLeftMargin = kTableCellHPadding;
+        if (self.imageView2.superview != nil)
+            [self.imageView2 removeFromSuperview];
+    }
     
     CGFloat textWidth = self.contentView.width - (self.imageView2.width + 2*kTableCellSmallMargin);
     self.textLabel.frame = CGRectMake(textLeftMargin, 0, textWidth, self.textLabel.font.ttLineHeight);

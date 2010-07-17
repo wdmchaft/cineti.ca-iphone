@@ -42,14 +42,8 @@
     NSMutableArray *movieList = [[[NSMutableArray alloc] init] autorelease];
     for (NSDictionary *movie in ((CinetiTheatreModel *)self.model).movies)
     {
-        /*
-        [movieList addObject:[CinetiTheatreTableItem itemWithText:[movie objectForKey:@"title"]
-                                                         subtitle:@"I'm a subtitle"
-                                                         imageURL:@"http://cineti.ca/poster/35951_thumb.jpg"
-                                                              URL:nil]];
-    */
         [movieList addObject:[CinetiTheatreTableItem itemWithText:[movie objectForKey:@"title"] 
-                                                         imageURL:@"http://cineti.ca/poster/35951_thumb.jpg" 
+                                                         imageURL:[movie objectForKey:@"thumbnail"]
                                                               URL:nil]];
     }
     
