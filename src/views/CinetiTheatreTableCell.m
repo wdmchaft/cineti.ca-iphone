@@ -55,7 +55,7 @@
         
         CinetiTheatreTableItem *item = (CinetiTheatreTableItem *)object;
         self.textLabel.text = item.text;
-        self.detailTextLabel.text = @"subtexty";
+        self.detailTextLabel.text = [item showtimesString];
         self.imageView2.urlPath = item.imageURL;
     }
 }

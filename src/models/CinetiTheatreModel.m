@@ -63,8 +63,16 @@
     _movies = [NSMutableArray arrayWithCapacity:[rawMovies count]];
     for (NSDictionary *movie in rawMovies)
     {
-        NSLog(@"Got movie %@, thumbnail %@", [movie objectForKey:@"title"]);
+        // The server formats times as hh:mm:ss, which is dumb to display.
+        NSArray *rawtimes = [movie arrayForKey:@"times"];
+        NSMutableArray *times = [NSMutableArray arrayWithCapacity:[rawtimes count]];
+        for (NSString *s in rawtimes)
+        {
+            NSArray *split = [s componentsSeparatedByString:@":"];
+            [times addNonEmptyString:[NSString stringWithFormat:@"%@:%@", [split objectAtIndex:0], [split objectAtIndex:1]]];
+        }
         [_movies addObject:[CinetiTheatreTableItem itemWithText:[movie objectForKey:@"title"] 
+                                                      showtimes:times
                                                        imageURL:[movie objectForKey:@"thumbnail"]
                                                             URL:nil]];
     }

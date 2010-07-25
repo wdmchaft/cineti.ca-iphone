@@ -10,8 +10,12 @@
 
 
 @interface CinetiTheatreTableItem : TTTableSubtitleItem {
+    NSArray *_showtimes;
 }
 
-+ (id)itemWithText:(NSString *)text imageURL:(NSString *)imageURL URL:(NSString *)URL;
+@property (nonatomic, retain) NSArray *showtimes;
+
+- (NSString *)showtimesString;
++ (id)itemWithText:(NSString *)text showtimes:(NSArray *)showtimes imageURL:(NSString *)imageURL URL:(NSString *)URL;
 
 @end
