@@ -18,6 +18,8 @@
 		6E361FBC11AE283D00EE956A /* CinetiTheatresModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E361FB111AE26EA00EE956A /* CinetiTheatresModel.m */; };
 		6E3621A211B078CC00EE956A /* CinetiTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3621A111B078CC00EE956A /* CinetiTabBarController.m */; };
 		6E3621D411B07BBD00EE956A /* CinetiTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3621A111B078CC00EE956A /* CinetiTabBarController.m */; };
+		6E453708126CDF610036493D /* CinetiMovieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E453707126CDF610036493D /* CinetiMovieManager.m */; };
+		6E453750126CE9610036493D /* CinetiMovieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E453707126CDF610036493D /* CinetiMovieManager.m */; };
 		6E726E4C11B8DDA600076846 /* CinetiTheatreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E726E4B11B8DDA600076846 /* CinetiTheatreModel.m */; };
 		6E726E6011B8E1E100076846 /* CinetiTheatreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E726E4B11B8DDA600076846 /* CinetiTheatreModel.m */; };
 		6E726E6B11B992CB00076846 /* CinetiTheatreDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E726E6A11B992CB00076846 /* CinetiTheatreDataSource.m */; };
@@ -491,6 +493,8 @@
 		6E361FB111AE26EA00EE956A /* CinetiTheatresModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiTheatresModel.m; sourceTree = "<group>"; };
 		6E3621A011B078CC00EE956A /* CinetiTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiTabBarController.h; sourceTree = "<group>"; };
 		6E3621A111B078CC00EE956A /* CinetiTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiTabBarController.m; sourceTree = "<group>"; };
+		6E453706126CDF610036493D /* CinetiMovieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiMovieManager.h; sourceTree = "<group>"; };
+		6E453707126CDF610036493D /* CinetiMovieManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiMovieManager.m; sourceTree = "<group>"; };
 		6E726E4A11B8DDA600076846 /* CinetiTheatreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiTheatreModel.h; sourceTree = "<group>"; };
 		6E726E4B11B8DDA600076846 /* CinetiTheatreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiTheatreModel.m; sourceTree = "<group>"; };
 		6E726E6911B992CB00076846 /* CinetiTheatreDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiTheatreDataSource.h; sourceTree = "<group>"; };
@@ -1412,6 +1416,8 @@
 				DB4393131180A670008D4114 /* CinetiMoviesRequest.m */,
 				DB4393051180A0E3008D4114 /* CinetiMovie.h */,
 				DB4393061180A0E3008D4114 /* CinetiMovie.m */,
+				6E453706126CDF610036493D /* CinetiMovieManager.h */,
+				6E453707126CDF610036493D /* CinetiMovieManager.m */,
 				6EB5E01211A3B2A300F3847F /* CinetiPhotoSource.h */,
 				6EB5E01311A3B2A300F3847F /* CinetiPhotoSource.m */,
 				6E9A3D0011A48E7D00BF0CC5 /* CinetiMoviePoster.h */,
@@ -1873,6 +1879,7 @@
 				6E726E6B11B992CB00076846 /* CinetiTheatreDataSource.m in Sources */,
 				6E882AE011C04E9E00D9FDCC /* CinetiTheatreTableItem.m in Sources */,
 				6E882AE311C04EA700D9FDCC /* CinetiTheatreTableCell.m in Sources */,
+				6E453708126CDF610036493D /* CinetiMovieManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1880,6 +1887,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E453750126CE9610036493D /* CinetiMovieManager.m in Sources */,
 				6E882AFB11C0C33900D9FDCC /* CinetiTheatreTableItem.m in Sources */,
 				6E882AFC11C0C33900D9FDCC /* CinetiTheatreTableCell.m in Sources */,
 				6E726E9C11B9BD8600076846 /* CinetiTheatreDataSource.m in Sources */,
