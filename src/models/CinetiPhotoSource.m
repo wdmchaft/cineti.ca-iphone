@@ -7,7 +7,6 @@
 //
 
 #import "CinetiPhotoSource.h"
-#import "CinetiMoviePoster.h"
 #import "CinetiMovie.h"
 
 @implementation CinetiPhotoSource
@@ -30,13 +29,10 @@
 {
     if (movie.posterThumbURL == nil)
         return;
-    
-    CinetiMoviePoster *poster = [CinetiMoviePoster moviePosterWithURL:movie.posterURL 
-                                                         withThumbURL:movie.posterThumbURL 
-                                                            withTitle:movie.title];
-    poster.photoSource = self;
-    poster.index = [self numberOfPhotos];
-    [_photos addObject:poster];
+
+    movie.photoSource = self;
+    movie.index = [self numberOfPhotos];
+    [_photos addObject:movie];
 }
 
 #pragma mark TTPhotoSource Methods

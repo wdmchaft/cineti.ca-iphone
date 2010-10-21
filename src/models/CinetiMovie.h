@@ -6,11 +6,17 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "CinetiJSONObject.h"
+#import "Three20/TTPhoto.h"
+#import "Three20/TTPhotoSource.h"
 
 
-@interface CinetiMovie : CinetiJSONObject {
-
+@interface CinetiMovie : CinetiJSONObject <TTPhoto> {
+    // Members needed for TTPhoto attributes
+    id <TTPhotoSource> photoSource;
+    CGSize size;
+    NSInteger index;
 }
 
 + movieFromRawMovie:(NSDictionary *)rawMovie;
