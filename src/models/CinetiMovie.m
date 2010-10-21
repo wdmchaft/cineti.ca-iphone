@@ -27,4 +27,12 @@
     return (NSString *)[self valueForKey:@"thumbnail"];
 }
 
+- (NSArray *)showtimes {
+    return (NSArray *)[self valueForKey:@"times"];
+}
+
+- (void)setShowtimes:(NSArray *)showtimes {
+    [self setValue:showtimes forKey:@"times"];
+}
+
 @end

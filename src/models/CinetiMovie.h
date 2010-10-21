@@ -18,5 +18,6 @@
 @property (readonly, nonatomic) NSString *title;
 @property (readonly, nonatomic) NSString *posterURL;
 @property (readonly, nonatomic) NSString *posterThumbURL;
+@property (retain, nonatomic) NSArray *showtimes;
 
 @end
