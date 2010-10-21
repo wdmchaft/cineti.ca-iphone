@@ -16,6 +16,7 @@
 
 - (id) initWithTheatreURL:(NSString *)url;
 
-@property (nonatomic, readonly) NSMutableArray *movies;
+@property (nonatomic, retain) NSString *theatreUrl;
+@property (nonatomic, retain) NSMutableArray *movies;
 
 @end

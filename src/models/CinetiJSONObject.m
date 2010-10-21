@@ -23,6 +23,9 @@
 	return [dictionary valueForKey:key];
 }
 
+- (void)setValue:(id)value forKey:(NSString *)key {
+    return [dictionary setValue:value forKey:key];
+}
 
 - (void)dealloc {
 	[dictionary release];

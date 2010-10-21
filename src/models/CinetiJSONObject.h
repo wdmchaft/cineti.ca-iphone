@@ -17,5 +17,6 @@
 - (id)initWithDictionary:(NSDictionary *)_dictionary;
 
 - (NSObject *)valueForKey:(NSString *)key;
+- (void)setValue:(id)value forKey:(NSString *)key;
 
 @end

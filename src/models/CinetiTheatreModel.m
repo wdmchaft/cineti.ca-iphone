@@ -8,37 +8,40 @@
 
 #import "CinetiTheatreModel.h"
 #import "CinetiTheatreTableItem.h"
+#import "CinetiMovieManager.h"
+#import "CinetiMovie.h"
 #import "NSString+SBJSON.h"
 
 @implementation CinetiTheatreModel
 
 @synthesize movies = _movies;
+@synthesize theatreUrl = _theatreUrl;
 
 - (id) initWithTheatreURL:(NSString *)url
 {
     if (self = [super init])
     {
-        _theatreUrl = [[NSString stringWithString:url] retain];
-        _movies = nil;
+        self.theatreUrl = [NSString stringWithString:url];
+        self.movies = nil;
     }
-    NSLog(@"CinetiTheatreModel: initWithTheatreURL(%@), self=%p", _theatreUrl, self);
+    NSLog(@"CinetiTheatreModel: initWithTheatreURL(%@), self=%p", self.theatreUrl, self);
     return self;
 }
 
 - (void) dealloc
 {
     NSLog(@"CinetiTheatreModel: dealloc");
-    [_theatreUrl release];
-    [_movies release];
+    self.theatreUrl = nil;
+    self.movies = nil;
     [super dealloc];
 }
 
 - (void)load:(TTURLRequestCachePolicy)cachePolicy more:(BOOL)more
 {
-    NSLog(@"CinetiTheatreModel: load %@, self=%p", _theatreUrl, self);
+    NSLog(@"CinetiTheatreModel: load %@, self=%p", self.theatreUrl, self);
     
     if (!self.isLoading) {
-        TTURLRequest *request = [TTURLRequest requestWithURL:_theatreUrl delegate:self];
+        TTURLRequest *request = [TTURLRequest requestWithURL:self.theatreUrl delegate:self];
         request.cachePolicy = cachePolicy;
         
         id<TTURLResponse> response = [[TTURLDataResponse alloc] init];
@@ -59,22 +62,28 @@
 	NSObject *object = [jsonString JSONValue];
     
     NSArray *rawMovies = [(NSDictionary *)object objectForKey:@"movies"];
-    [_movies release];
-    _movies = [NSMutableArray arrayWithCapacity:[rawMovies count]];
-    for (NSDictionary *movie in rawMovies)
+    self.movies = [NSMutableArray arrayWithCapacity:[rawMovies count]];
+    for (NSDictionary *rawmovie in rawMovies)
     {
         // The server formats times as hh:mm:ss, which is dumb to display.
-        NSArray *rawtimes = [movie arrayForKey:@"times"];
+        NSArray *rawtimes = [rawmovie arrayForKey:@"times"];
         NSMutableArray *times = [NSMutableArray arrayWithCapacity:[rawtimes count]];
         for (NSString *s in rawtimes)
         {
             NSArray *split = [s componentsSeparatedByString:@":"];
             [times addNonEmptyString:[NSString stringWithFormat:@"%@:%@", [split objectAtIndex:0], [split objectAtIndex:1]]];
         }
-        [_movies addObject:[CinetiTheatreTableItem itemWithText:[movie objectForKey:@"title"] 
-                                                      showtimes:times
-                                                       imageURL:[movie objectForKey:@"thumbnail"]
-                                                            URL:nil]];
+        NSString *title = [rawmovie objectForKey:@"title"];
+        CinetiMovieManager *moviemgr = [CinetiMovieManager sharedInstance];
+        CinetiMovie *movie = [moviemgr movieForId:title];
+        if (movie != nil)
+        {
+            movie.showtimes = times;
+        }
+        [self.movies addObject:[CinetiTheatreTableItem itemWithText:title
+                                                          showtimes:times
+                                                           imageURL:movie.posterThumbURL
+                                                                URL:nil]];
     }
     
     [super requestDidFinishLoad:request];
