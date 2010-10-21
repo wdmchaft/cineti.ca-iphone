@@ -14,7 +14,7 @@
 }
 
 - (CinetiMovie *)movieForId:(NSString *)movieid;
-- (void)addMovie:(CinetiMovie *)movie withId:(NSString *)movieid;
+- (void)addMovie:(CinetiMovie *)movie withKey:(NSString *)movieid;
 
 // Methods to make this a singleton class
 + (CinetiMovieManager *)sharedInstance;

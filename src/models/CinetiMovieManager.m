@@ -17,7 +17,7 @@ static CinetiMovieManager *sharedMovieManager = nil;
     return (CinetiMovie *)[dictionary objectForKey:movieid];
 }
 
-- (void)addMovie:(CinetiMovie *)movie withId:(NSString *)movieid
+- (void)addMovie:(CinetiMovie *)movie withKey:(NSString *)movieid
 {
     [dictionary setObject:movie forKey:movieid];
 }

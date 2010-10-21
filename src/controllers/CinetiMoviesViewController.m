@@ -8,6 +8,7 @@
 
 #import "CinetiMoviesViewController.h"
 #import "CinetiMoviesRequest.h"
+#import "CinetiMovieManager.h"
 #import "CinetiPhotoSource.h"
 #import "Three20/Three20.h"
 
@@ -88,9 +89,11 @@
 - (void)moviesRequest:(CinetiMoviesRequest *)request didSucceedWithMovies:(NSArray *)movies {
 	NSLog( @"Successfully retrieved %d movies", [movies count] );
     
-    for (id movie in movies)
+    for (CinetiMovie *movie in movies)
     {
-        NSLog(@"Got movie %@", [movie valueForKey:@"title"]);
+        NSLog(@"Got movie %@", movie.title);
+        [[CinetiMovieManager sharedInstance] addMovie:movie withKey:movie.title];
+        // FIXME: Redo all this photosource business
         [(CinetiPhotoSource *)self.photoSource addMovie:movie];
     }
 	[request autorelease];
