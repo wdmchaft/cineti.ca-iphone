@@ -8,6 +8,7 @@
 
 #import "CinetiAppDelegate.h"
 #import "CinetiMoviesViewController.h"
+#import "CinetiMovieViewController.h"
 #import "CinetiTheatresViewController.h"
 #import "CinetiTheatreViewController.h"
 #import "CinetiTabBarController.h"
@@ -27,6 +28,7 @@
     
     [map from:@"http://api.cineti.ca" toSharedViewController:[CinetiTabBarController class]];
     [map from:@"http://api.cineti.ca/movies" toSharedViewController:[CinetiMoviesViewController class]];
+    [map from:kMovieBaseUrl @"(initWithMovieId:)" toViewController:[CinetiMovieViewController class]];
     [map from:@"http://api.cineti.ca/theaters" toSharedViewController:[CinetiTheatresViewController class]];
     [map from:kTheatreBaseUrl @"(initWithTheatreName:)" toViewController:[CinetiTheatreViewController class]];
 

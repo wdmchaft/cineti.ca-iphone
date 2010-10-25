@@ -83,7 +83,7 @@
         [self.movies addObject:[CinetiTheatreTableItem itemWithText:title
                                                           showtimes:times
                                                            imageURL:movie.posterThumbURL
-                                                                URL:nil]];
+                                                                URL:[rawmovie objectForKey:@"href"]]];
     }
     
     [super requestDidFinishLoad:request];
