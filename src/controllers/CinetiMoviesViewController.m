@@ -92,7 +92,7 @@
     for (CinetiMovie *movie in movies)
     {
         NSLog(@"Got movie %@", movie.title);
-        [[CinetiMovieManager sharedInstance] addMovie:movie withKey:movie.title];
+        [[CinetiMovieManager sharedInstance] addMovie:movie withKey:movie.movieid];
         // FIXME: Redo all this photosource business
         [(CinetiPhotoSource *)self.photoSource addMovie:movie];
     }

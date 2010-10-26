@@ -21,6 +21,7 @@
 
 + movieFromRawMovie:(NSDictionary *)rawMovie;
 
+@property (readonly, nonatomic) NSString *movieid;
 @property (readonly, nonatomic) NSString *title;
 @property (readonly, nonatomic) NSString *posterURL;
 @property (readonly, nonatomic) NSString *posterThumbURL;

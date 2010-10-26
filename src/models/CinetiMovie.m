@@ -47,6 +47,10 @@
 	return [[[CinetiMovie alloc] initWithDictionary:rawMovie] autorelease];
 }
 
+- (NSString *)movieid {
+    return (NSString *)[self valueForKey:@"href"];
+}
+
 - (NSString *)title {
 	return (NSString *)[self valueForKey:@"title"];
 }

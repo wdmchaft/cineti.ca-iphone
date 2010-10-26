@@ -73,17 +73,16 @@
             NSArray *split = [s componentsSeparatedByString:@":"];
             [times addNonEmptyString:[NSString stringWithFormat:@"%@:%@", [split objectAtIndex:0], [split objectAtIndex:1]]];
         }
-        NSString *title = [rawmovie objectForKey:@"title"];
-        CinetiMovieManager *moviemgr = [CinetiMovieManager sharedInstance];
-        CinetiMovie *movie = [moviemgr movieForId:title];
+        NSString *movieid = [rawmovie objectForKey:@"href"];
+        CinetiMovie *movie = [[CinetiMovieManager sharedInstance] movieForId:movieid];
         if (movie != nil)
         {
             movie.showtimes = times;
         }
-        [self.movies addObject:[CinetiTheatreTableItem itemWithText:title
+        [self.movies addObject:[CinetiTheatreTableItem itemWithText:[rawmovie objectForKey:@"title"]
                                                           showtimes:times
                                                            imageURL:movie.posterThumbURL
-                                                                URL:[rawmovie objectForKey:@"href"]]];
+                                                                URL:movieid]];
     }
     
     [super requestDidFinishLoad:request];
