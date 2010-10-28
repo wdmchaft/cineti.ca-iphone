@@ -55,11 +55,33 @@
 	return (NSString *)[self valueForKey:@"title"];
 }
 
+- (NSString *)plot {
+    return (NSString *)[self valueForKey:@"plot"];
+}
+
 - (NSString *)posterURL {
+    NSObject *rawPosterList = [self valueForKey:@"posters"];
+    if (rawPosterList && [rawPosterList isKindOfClass:[NSArray class]]) {
+        NSArray *posterList = (NSArray *)rawPosterList;
+        for (NSObject *poster in posterList) {
+            if ([poster isKindOfClass:[NSDictionary class]] && [@"large" isEqualToString:[poster valueForKey:@"size"]]) {
+                return [poster valueForKey:@"href"];
+            }
+        }
+    }
     return (NSString *)[self valueForKey:@"thumbnail"];
 }
 
 - (NSString *)posterThumbURL {
+    NSObject *rawPosterList = [self valueForKey:@"posters"];
+    if (rawPosterList && [rawPosterList isKindOfClass:[NSArray class]]) {
+        NSArray *posterList = (NSArray *)rawPosterList;
+        for (NSObject *poster in posterList) {
+            if ([poster isKindOfClass:[NSDictionary class]] && [@"small" isEqualToString:[poster valueForKey:@"size"]]) {
+                return [poster valueForKey:@"href"];
+            }
+        }
+    }
     return (NSString *)[self valueForKey:@"thumbnail"];
 }
 

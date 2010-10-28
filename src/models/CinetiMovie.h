@@ -23,6 +23,7 @@
 
 @property (readonly, nonatomic) NSString *movieid;
 @property (readonly, nonatomic) NSString *title;
+@property (readonly, nonatomic) NSString *plot;
 @property (readonly, nonatomic) NSString *posterURL;
 @property (readonly, nonatomic) NSString *posterThumbURL;
 @property (retain, nonatomic) NSArray *showtimes;
