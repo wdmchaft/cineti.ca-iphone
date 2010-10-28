@@ -7,6 +7,10 @@
 //
 
 #import "CinetiMovieViewController.h"
+#import "CinetiMovie.h"
+#import "CinetiMovieManager.h"
+#import "CinetiMovieDataSource.h"
+#import "CinetiMovieModel.h"
 
 
 @implementation CinetiMovieViewController
@@ -16,24 +20,12 @@
     if (self = [super init]) {
         self.variableHeightRows = YES;
         
-        /*
-        id<TTTableViewDataSource> ds = [CinetiMovieDataSource dataSourceWithItems:nil];
-        ds.model = [[CinetiTheatreModel alloc] initWithTheatreURL:[NSString stringWithFormat:@"%@%@.json", kTheatreBaseUrl, theatreName]];
+        // The id passed in is just the base number, not the full URL
+        NSString *movieUrl = [NSString stringWithFormat:@"%@%@.json", kMovieBaseUrl, movieid];
+        
+        id<TTTableViewDataSource> ds = [[[CinetiMovieDataSource alloc] initWithMovieURL:movieUrl] autorelease];
+        ds.model = [[[CinetiMovieModel alloc] initWithMovieURL:movieUrl] autorelease];
         self.dataSource = ds;
-        */
-        self.dataSource = [TTSectionedDataSource dataSourceWithObjects:
-                           @"Details",
-                           [TTTableMessageItem itemWithTitle:[NSString stringWithFormat:@"Movie Title %@", movieid] caption:@"Drama" text:@"OMG this is, like, the bestest movie ever, you guys." timestamp:[NSDate date] imageURL:@"http://cineti.ca/poster/3592.jpg" URL:nil],
-                           @"Today",
-                           [TTTableSubtextItem itemWithText:@"Some theatre or other" caption:@"12:00 1:00 2:00 3:00 4:00 5:00 6:00 7:00 8:00 9:00"],
-                           [TTTableSubtextItem itemWithText:@"Crapville" caption:@"4:00 5:00"],
-                           @"Tomorrow",
-                           [TTTableSubtextItem itemWithText:@"Some theatre or other" caption:@"12:00 1:00 2:00 3:00 4:00 5:00 6:00 7:00 8:00 9:00"],
-                           [TTTableSubtextItem itemWithText:@"Crapville" caption:@"4:00 5:00"],
-                           @"Wednesday",
-                           [TTTableSubtextItem itemWithText:@"Some theatre or other" caption:@"12:00 1:00 2:00 3:00 4:00 5:00 6:00 7:00 8:00 9:00"],
-                           [TTTableSubtextItem itemWithText:@"Crapville" caption:@"4:00 5:00"], 
-                           nil];
     }
     
     return self;
