@@ -14,5 +14,6 @@
 @interface CinetiTheatreDataSource : TTListDataSource {
 }
 
+- (id)initWithTheatreURL:(NSString *)url;
 
 @end

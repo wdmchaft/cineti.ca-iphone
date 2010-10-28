@@ -17,6 +17,7 @@
 - (id)initWithMovieURL:(NSString *)movieurl {
     NSLog(@"CinetiMovieDataSource: init");
     if (self = [super init]) {
+        self.model = [[[CinetiMovieModel alloc] initWithMovieURL:movieurl] autorelease];
     }
     
     return self;    

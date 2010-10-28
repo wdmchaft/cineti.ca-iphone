@@ -23,9 +23,7 @@
         // The id passed in is just the base number, not the full URL
         NSString *movieUrl = [NSString stringWithFormat:@"%@%@.json", kMovieBaseUrl, movieid];
         
-        id<TTTableViewDataSource> ds = [[[CinetiMovieDataSource alloc] initWithMovieURL:movieUrl] autorelease];
-        ds.model = [[[CinetiMovieModel alloc] initWithMovieURL:movieUrl] autorelease];
-        self.dataSource = ds;
+        self.dataSource = [[[CinetiMovieDataSource alloc] initWithMovieURL:movieUrl] autorelease];
     }
     
     return self;

@@ -18,9 +18,8 @@
     if (self = [super init]) {
         self.variableHeightRows = YES;
         
-        id<TTTableViewDataSource> ds = [CinetiTheatreDataSource dataSourceWithItems:nil];
-        ds.model = [[CinetiTheatreModel alloc] initWithTheatreURL:[NSString stringWithFormat:@"%@%@.json", kTheatreBaseUrl, theatreName]];
-        self.dataSource = ds;
+        NSString *theatreURL = [NSString stringWithFormat:@"%@%@.json", kTheatreBaseUrl, theatreName];
+        self.dataSource = [[[CinetiTheatreDataSource alloc] initWithTheatreURL:theatreURL] autorelease];
     }
     
     return self;

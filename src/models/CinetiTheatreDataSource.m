@@ -13,10 +13,11 @@
 
 @implementation CinetiTheatreDataSource
 
-- (id)init
+- (id)initWithTheatreURL:(NSString *)url
 {
     NSLog(@"CinetiTheatreDataSource: init");
     if (self = [super init]) {
+        self.model = [[[CinetiTheatreModel alloc] initWithTheatreURL:url] autorelease];
     }
     
     return self;
