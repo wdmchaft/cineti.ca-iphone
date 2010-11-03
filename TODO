@@ -1,0 +1,63 @@
+x Create central movie info object
+    x Decide where it lives
+    x Make CinetiTheatreModel put its info (showtimes) into central store
+    x Make CinetiPhotoSource put its info (thumb urls etc) into central store
+    x Ditch duplicate movie models
+        x CinetiMoviePoster
+x Add thumbnails to per-theatre movie list
+x Assign Cineti{Movie,Theatre}DataSource's model in its initializer, not in view controller.
+
+* Create per-movie view
+    x Link from per-theatre view
+    * Use real data for movie view
+        x Load full movie details
+            x Create a CinetiMovieDataSource
+            x Create a CinetiMovieModel
+        x Use real description/poster/etc.
+        * Dig up real showtimes
+        * Use real showtimes
+    * Fix movie description row
+        * Don't show update time
+        * Show larger poster
+            * Long term: use poster as background image
+        * Show full description
+    * Link from main view
+    * Fix extra space between showtime rows
+    * Load movie details if not in CinetiMovieManager
+
+* Fix main thumbnail view
+    * Create custom view to display thumbnails in proper aspect ratio
+    * Animate transition to per-movie display
+
+* Better display when a theatre has no movies
+
+* Word wrap showtimes
+
+* Replace "Url" with "URL" consistently
+
+* Figure out why some movies don't have posters in per-theatre view.
+    * If unfixable, figure out where to put no-thumbnail movies in main movie list
+
+* Fix thumbnail URL mangling in CinetiMovie.m
+
+* Show movie thumbnails at startup, even in theatre list
+    * Persist movie data?
+        * Clear out old entries somehow
+    * Refresh main movie list at startup?
+
+* Talk to Georges to get genre information into API feed
+
+* Fix title of per-theatre view
+
+* Fix title of per-movie view
+
+* Add "about" tab
+
+* Investigate missing posters vs. webpage
+
+* Refactor CinetiMovieModel/CinetiTheatreModel - almost identical.  Maybe CinetiJSONModel?
+
+* Get rid of CinetiJSONObject?
+* Get rid of CinetiJSONRequest?
+
+* Replace NSLog with TTLog?
