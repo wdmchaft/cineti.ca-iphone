@@ -8,6 +8,7 @@
 
 #import "CinetiTheatreTableCell.h"
 #import "CinetiTheatreTableItem.h"
+#import "CinetiMovie.h"
 
 #define kImageWidth 95
 #define kImageHeight 140
@@ -55,7 +56,7 @@
         
         CinetiTheatreTableItem *item = (CinetiTheatreTableItem *)object;
         self.textLabel.text = item.text;
-        self.detailTextLabel.text = [item showtimesString];
+        self.detailTextLabel.text = [CinetiMovie stringFromShowtimes:item.showtimes];
         self.imageView2.urlPath = item.imageURL;
     }
 }

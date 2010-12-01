@@ -64,20 +64,12 @@
     NSArray *rawMovies = [(NSDictionary *)object objectForKey:@"movies"];
     self.movies = [NSMutableArray arrayWithCapacity:[rawMovies count]];
     for (NSDictionary *rawmovie in rawMovies)
-    {
-        // The server formats times as hh:mm:ss, which is dumb to display.
-        NSArray *rawtimes = [rawmovie arrayForKey:@"times"];
-        NSMutableArray *times = [NSMutableArray arrayWithCapacity:[rawtimes count]];
-        for (NSString *s in rawtimes)
-        {
-            NSArray *split = [s componentsSeparatedByString:@":"];
-            [times addNonEmptyString:[NSString stringWithFormat:@"%@:%@", [split objectAtIndex:0], [split objectAtIndex:1]]];
-        }
+    {        
         NSString *movieid = [rawmovie objectForKey:@"href"];
         CinetiMovie *movie = [[CinetiMovieManager sharedInstance] movieForId:movieid];
         
         [self.movies addObject:[CinetiTheatreTableItem itemWithText:[rawmovie objectForKey:@"title"]
-                                                          showtimes:times
+                                                          showtimes:[rawmovie objectForKey:@"times"]
                                                            imageURL:movie.posterThumbURL
                                                                 URL:movieid]];
     }

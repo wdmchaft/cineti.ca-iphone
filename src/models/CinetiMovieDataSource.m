@@ -44,6 +44,14 @@
                                                              URL:nil];
     [self.items addObject:[NSArray arrayWithObject:item]];
     
+    [self.sections addObject:@"Today"];
+    for (NSDictionary *theater in movie.theatres) {
+        NSLog(@"Found theater: %@", [theater objectForKey:@"href"]);
+        NSString *showtimestring = [CinetiMovie stringFromShowtimes:[theater valueForKey:@"times"]];
+        TTTableCaptionItem *showtime = [TTTableCaptionItem itemWithText:showtimestring caption:[theater valueForKey:@"name"]];
+        [self.items addObject:[NSArray arrayWithObject:showtime]];
+    }
+    
     [super tableViewDidLoadModel:tableView];
 }
 
