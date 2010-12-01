@@ -14,8 +14,9 @@ x Assign Cineti{Movie,Theatre}DataSource's model in its initializer, not in view
             x Create a CinetiMovieDataSource
             x Create a CinetiMovieModel
         x Use real description/poster/etc.
-        * Dig up real showtimes
-        * Use real showtimes
+        x Use real showtimes for today
+        * Dig up real showtimes for future days
+        * Show future showtimes
     * Fix movie description row
         * Don't show update time
         * Show larger poster
