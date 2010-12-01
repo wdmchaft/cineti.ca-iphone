@@ -26,6 +26,6 @@
 @property (readonly, nonatomic) NSString *plot;
 @property (readonly, nonatomic) NSString *posterURL;
 @property (readonly, nonatomic) NSString *posterThumbURL;
-@property (retain, nonatomic) NSArray *showtimes;
+@property (readonly, nonatomic) NSArray *showtimes;
 
 @end

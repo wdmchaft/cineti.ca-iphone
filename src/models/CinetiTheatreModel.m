@@ -75,10 +75,7 @@
         }
         NSString *movieid = [rawmovie objectForKey:@"href"];
         CinetiMovie *movie = [[CinetiMovieManager sharedInstance] movieForId:movieid];
-        if (movie != nil)
-        {
-            movie.showtimes = times;
-        }
+        
         [self.movies addObject:[CinetiTheatreTableItem itemWithText:[rawmovie objectForKey:@"title"]
                                                           showtimes:times
                                                            imageURL:movie.posterThumbURL
