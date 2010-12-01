@@ -99,10 +99,6 @@
     return (NSString *)[self valueForKey:@"thumbnail"];
 }
 
-- (NSArray *)showtimes {
-    return (NSArray *)[self valueForKey:@"times"];
-}
-
 - (NSArray *)theatres {
     return (NSArray *)[self valueForKey:@"theaters"];
 }
