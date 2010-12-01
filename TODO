@@ -26,7 +26,7 @@ x Assign Cineti{Movie,Theatre}DataSource's model in its initializer, not in view
     * Load movie details if not in CinetiMovieManager
 
 * Fix main thumbnail view
-    * Create custom view to display thumbnails in proper aspect ratio
+    * Create custom view to display thumbnails in proper aspect ratio - based on TTLauncher?
     * Animate transition to per-movie display
 
 * Better display when a theatre has no movies
@@ -44,16 +44,19 @@ x Assign Cineti{Movie,Theatre}DataSource's model in its initializer, not in view
     * Persist movie data?
         * Clear out old entries somehow
     * Refresh main movie list at startup?
+    * Just get Georges to include thumbnail URLs in theatre list?
 
-* Talk to Georges to get genre information into API feed
+* Stuff for Georges:
+    * Get genre information into movie details
+    * Thumbnail URLs in per-theatre JSON
+    * More complete showtime information in per-movie JSON
+    * Missing posters in JSON vs. on webpage
 
 * Fix title of per-theatre view
 
 * Fix title of per-movie view
 
 * Add "about" tab
-
-* Investigate missing posters vs. webpage
 
 * Refactor CinetiMovieModel/CinetiTheatreModel - almost identical.  Maybe CinetiJSONModel?
 
