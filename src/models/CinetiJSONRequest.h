@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CinetiJSONRequest.h"
-#import "TTURLRequestDelegate.h"
+#import "Three20/Three20.h"
 
 
 @protocol CinetiJSONRequestDelegate;

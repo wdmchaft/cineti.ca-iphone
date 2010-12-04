@@ -9,6 +9,7 @@
 #import "CinetiTheatresModel.h"
 #import "Three20/Three20.h"
 #import "NSString+SBJSON.h"
+#import "SBJSON.h"
 
 @implementation CinetiTheatresModel
 
@@ -55,8 +56,12 @@
     
     // Parse response
 	NSString *jsonString = [[[NSString alloc] initWithData:response.data encoding:NSUTF8StringEncoding] autorelease];
-	NSObject *object = [jsonString JSONValue];
-
+    // The JSONValue extension doesn't seem to like Three20, just do it the regular way
+	//NSObject *object = [jsonString JSONValue];
+    SBJsonParser *jsonParser = [SBJsonParser new];
+    NSObject *object = [jsonParser fragmentWithString:jsonString];
+    [jsonParser release];
+    
 	NSArray *rawTheatres = (NSArray *)object;
 	NSMutableArray *theatres = [[NSMutableArray arrayWithCapacity:[rawTheatres count]] retain];
 	for ( NSDictionary *rawTheatre in rawTheatres ) {

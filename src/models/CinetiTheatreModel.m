@@ -11,6 +11,7 @@
 #import "CinetiMovieManager.h"
 #import "CinetiMovie.h"
 #import "NSString+SBJSON.h"
+#import "SBJSON.h"
 
 @implementation CinetiTheatreModel
 
@@ -59,7 +60,11 @@
     
     // Parse response
 	NSString *jsonString = [[[NSString alloc] initWithData:response.data encoding:NSUTF8StringEncoding] autorelease];
-	NSObject *object = [jsonString JSONValue];
+    // The JSONValue extension doesn't seem to like Three20, just do it the regular way
+	//NSObject *object = [jsonString JSONValue];
+    SBJsonParser *jsonParser = [SBJsonParser new];
+    NSObject *object = [jsonParser fragmentWithString:jsonString];
+    [jsonParser release];
     
     NSArray *rawMovies = [(NSDictionary *)object objectForKey:@"movies"];
     self.movies = [NSMutableArray arrayWithCapacity:[rawMovies count]];

@@ -8,9 +8,9 @@
 
 #import "CinetiJSONRequest.h"
 #import "CinetiJSONRequestDelegate.h"
-#import "TTURLRequest.h"
-#import "TTURLDataResponse.h"
+#import "Three20/Three20+Additions.h"
 #import "NSString+SBJSON.h"
+#import "SBJSON.h"
 
 
 @implementation CinetiJSONRequest
@@ -42,7 +42,11 @@
 - (void)requestDidFinishLoad:(TTURLRequest*)request {
     TTURLDataResponse *response = (TTURLDataResponse *)request.response;
 	NSString *jsonString = [[[NSString alloc] initWithData:response.data encoding:NSUTF8StringEncoding] autorelease];
-	NSObject *object = [jsonString JSONValue];
+    // The JSONValue extension doesn't seem to like Three20, just do it the regular way
+	//NSObject *object = [jsonString JSONValue];
+    SBJsonParser *jsonParser = [SBJsonParser new];
+    NSObject *object = [jsonParser fragmentWithString:jsonString];
+    [jsonParser release];
 	[delegate jsonRequest:self didSucceedWithObject:object];
 }
 
