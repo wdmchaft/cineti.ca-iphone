@@ -8,7 +8,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Three20/TTSectionedDataSource.h"
+#import "Three20/Three20.h"
 
 @class CinetiMovieModel;
 

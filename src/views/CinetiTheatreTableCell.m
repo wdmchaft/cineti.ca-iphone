@@ -9,6 +9,7 @@
 #import "CinetiTheatreTableCell.h"
 #import "CinetiTheatreTableItem.h"
 #import "CinetiMovie.h"
+#import "Three20/Three20+Additions.h"
 
 #define kImageWidth 95
 #define kImageHeight 140

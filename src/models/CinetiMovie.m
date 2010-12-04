@@ -7,7 +7,7 @@
 //
 
 #import "CinetiMovie.h"
-#import "Three20.h"
+#import "Three20/Three20.h"
 
 
 @implementation CinetiMovie

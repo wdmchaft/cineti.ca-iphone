@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CinetiJSONObject.h"
-#import "Three20/TTPhoto.h"
-#import "Three20/TTPhotoSource.h"
+#import "Three20/Three20.h"
 
 
 @interface CinetiMovie : CinetiJSONObject <TTPhoto> {

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Three20/TTURLRequestModel.h"
+#import "Three20/Three20.h"
 
 
 @interface CinetiTheatresModel : TTURLRequestModel {
