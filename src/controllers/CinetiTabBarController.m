@@ -7,6 +7,7 @@
 //
 
 #import "CinetiTabBarController.h"
+#import <Three20/Three20+Additions.h>
 
 
 @implementation CinetiTabBarController

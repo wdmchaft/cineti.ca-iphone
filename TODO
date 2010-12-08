@@ -26,6 +26,10 @@ x Assign Cineti{Movie,Theatre}DataSource's model in its initializer, not in view
     * Fix extra space between showtime rows
     * Load movie details if not in CinetiMovieManager
 
+* Update to latest Three20
+    x Fix library includes
+    x Tab bar disappeared?
+
 * Fix main thumbnail view
     * Create custom view to display thumbnails in proper aspect ratio - based on TTLauncher?
     * Animate transition to per-movie display
@@ -65,3 +69,9 @@ x Assign Cineti{Movie,Theatre}DataSource's model in its initializer, not in view
 * Get rid of CinetiJSONRequest?
 
 * Replace NSLog with TTLog?
+
+* Fix JSONValue category method use.
+    * Category methods only work when linked with -ObjC, Three20 gets angry with -ObjC
+    * Problem potentially due to having libjson linked to Three20, not directly to Cineti executable?
+    * Problem potentially due to libtool bug where category methods ignored without a class in the file (unless -ObjC set)?
+    * Use Three20's included SBJSON lib? https://github.com/facebook/three20/tree/master/src/extThree20JSON/

@@ -19,6 +19,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         self.title = @"Movies";
+        self.hidesBottomBarWhenPushed = NO;
     }
     return self;
 }
