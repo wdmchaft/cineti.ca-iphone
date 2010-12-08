@@ -7,6 +7,12 @@ x Create central movie info object
 x Add thumbnails to per-theatre movie list
 x Assign Cineti{Movie,Theatre}DataSource's model in its initializer, not in view controller.
 
+x iPhone status bar goes black in movies list.
+
+x Update to latest Three20
+    x Fix library includes
+    x Tab bar disappeared?
+
 * Create per-movie view
     x Link from per-theatre view
     * Use real data for movie view
@@ -25,10 +31,6 @@ x Assign Cineti{Movie,Theatre}DataSource's model in its initializer, not in view
     * Link from main view
     * Fix extra space between showtime rows
     * Load movie details if not in CinetiMovieManager
-
-* Update to latest Three20
-    x Fix library includes
-    x Tab bar disappeared?
 
 * Fix main thumbnail view
     * Create custom view to display thumbnails in proper aspect ratio - based on TTLauncher?
@@ -74,4 +76,4 @@ x Assign Cineti{Movie,Theatre}DataSource's model in its initializer, not in view
     * Category methods only work when linked with -ObjC, Three20 gets angry with -ObjC
     * Problem potentially due to having libjson linked to Three20, not directly to Cineti executable?
     * Problem potentially due to libtool bug where category methods ignored without a class in the file (unless -ObjC set)?
-    * Use Three20's included SBJSON lib? https://github.com/facebook/three20/tree/master/src/extThree20JSON/
+    * Use Three20's included SBJSON lib? https://github.com/facebook/three20/tree/master/src/extThree20JSON/ https://github.com/facebook/three20/blob/master/Articles/AboutModules.mdown

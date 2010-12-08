@@ -20,6 +20,7 @@
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         self.title = @"Movies";
         self.hidesBottomBarWhenPushed = NO;
+        self.statusBarStyle = UIStatusBarStyleDefault;
     }
     return self;
 }
