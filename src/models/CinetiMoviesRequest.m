@@ -31,7 +31,9 @@
 
 
 + (CinetiMoviesRequest *)moviesRequestWithDelegate:(id <CinetiMoviesRequestDelegate>)_delegate {
-	return [[[CinetiMoviesRequest alloc] initWithDelegate:_delegate] autorelease];
+    // Doing this all on one line causes a compiler warning.
+    CinetiMoviesRequest *req = [CinetiMoviesRequest alloc];
+    return [[req initWithDelegate:_delegate] autorelease];
 }
 
 
