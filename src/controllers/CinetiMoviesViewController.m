@@ -56,6 +56,7 @@
 #pragma mark TTLauncherViewDelegate
 
 - (void)launcherView:(TTLauncherView*)launcher didSelectItem:(TTLauncherItem*)item {
+    [[TTNavigator navigator] openURLAction:[TTURLAction actionWithURLPath:item.URL]];
 }
 
 - (void)launcherViewDidBeginEditing:(TTLauncherView*)launcher {
@@ -76,9 +77,9 @@
     
     for (CinetiMovie *movie in movies)
     {
-        NSLog(@"Got movie %@", movie.title);
+        NSLog(@"Got movie %@, URL %@", movie.title, movie.movieid);
         [[CinetiMovieManager sharedInstance] addMovie:movie withKey:movie.movieid];
-        [_launcher addItem:[[[TTLauncherItem alloc] initWithTitle:movie.title image:movie.posterThumbURL URL:movie.URLValue] autorelease] animated:NO];
+        [_launcher addItem:[[[TTLauncherItem alloc] initWithTitle:movie.title image:movie.posterThumbURL URL:movie.movieid] autorelease] animated:NO];
     }
 	[request autorelease];
 }
