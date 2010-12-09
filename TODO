@@ -37,7 +37,7 @@ x Update to latest Three20
         * Display a loading screen while fetching movie list
         x Show movie thumbnails in launcher after retrieving details
         x Link to per-movie display
-    * Prevent edit mode from showing up.
+    x Prevent edit mode from showing up.
     * Ensure posters don't get cut off at bottom
         * Hide title bar?
     * Deal with poster-less movies

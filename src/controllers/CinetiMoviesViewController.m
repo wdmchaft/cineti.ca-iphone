@@ -12,8 +12,15 @@
 #import "CinetiPhotoSource.h"
 #import "Three20/Three20.h"
 
-@implementation CinetiMoviesViewController
+@implementation TTLauncherView (DisableEditing) 
 
+- (void)editHoldTimer:(NSTimer*)timer {
+    _editHoldTimer = nil; 
+}
+
+@end
+
+@implementation CinetiMoviesViewController
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
