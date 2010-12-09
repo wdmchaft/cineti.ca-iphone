@@ -76,18 +76,26 @@
     [self.navigationItem setRightBarButtonItem:nil animated:YES];
 }
 
-
 #pragma mark CinetiMoviesRequestDelegate
 
 - (void)moviesRequest:(CinetiMoviesRequest *)request didSucceedWithMovies:(NSArray *)movies {
 	NSLog( @"Successfully retrieved %d movies", [movies count] );
     
+    NSMutableArray *picturelessMovies = [[[NSMutableArray alloc] init] autorelease];
     _launcher.pages = nil;
     for (CinetiMovie *movie in movies)
     {
         NSLog(@"Got movie %@, URL %@", movie.title, movie.movieid);
         [[CinetiMovieManager sharedInstance] addMovie:movie withKey:movie.movieid];
-        [_launcher addItem:[[[TTLauncherItem alloc] initWithTitle:movie.title image:movie.posterThumbURL URL:movie.movieid] autorelease] animated:NO];
+        TTLauncherItem *item = [[[TTLauncherItem alloc] initWithTitle:movie.title image:movie.posterThumbURL URL:movie.movieid] autorelease];
+        if (movie.posterThumbURL != nil)
+            [_launcher addItem:item animated:NO];
+        else
+            [picturelessMovies addObject:item];
+    }
+    // Collect all the movies without thumbnails at the end.
+    for (TTLauncherItem *item in picturelessMovies) {
+        [_launcher addItem:item animated:NO];
     }
     [_launcher setCurrentPageIndex:0];
 	[request autorelease];

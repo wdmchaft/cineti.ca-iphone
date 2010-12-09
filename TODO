@@ -38,14 +38,14 @@ x Update to latest Three20
         x Show movie thumbnails in launcher after retrieving details
         x Link to per-movie display
     x Prevent edit mode from showing up.
+    x Display first page on startup
+    x Deal with poster-less movies
     * Ensure posters don't get cut off at bottom
         * Hide title bar?
-    * Deal with poster-less movies
     * Animate transition to per-movie display
     * Make pager dots actually visible.
     * Nuke PhotoSource madness.
         * Don't forget TTPhoto junk in CinetiMovie
-    x Display first page on startup
 
 * Better display when a theatre has no movies
 
