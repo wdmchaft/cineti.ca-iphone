@@ -42,8 +42,8 @@ x Update to latest Three20
     x Display first page on startup
     x Deal with poster-less movies
     x Nuke PhotoSource madness.
-    * Ensure posters don't get cut off at bottom - hide title bar
-    * Make pager dots actually visible.
+    x Ensure posters don't get cut off at bottom - hide title bar
+    x Make pager dots actually visible.
     * Add top margin
     * Put white margin around posters (enough space?)
     * Animate transition to per-movie display

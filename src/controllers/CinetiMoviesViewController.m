@@ -50,7 +50,9 @@
     _launcher = [[TTLauncherView alloc] initWithFrame:self.view.bounds];
     _launcher.delegate = self;
     _launcher.columnCount = 3;
+    _launcher.backgroundColor = [UIColor colorWithRed:236/255.0f green:236/255.0f blue:236/255.0f alpha:1.0f];
     [self.view addSubview:_launcher];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     
     [[CinetiMoviesRequest moviesRequestWithDelegate:self] retain];
 }
@@ -59,10 +61,20 @@
 	// Release any retained subviews of the main view.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 #pragma mark TTLauncherViewDelegate
 
 - (void)launcherView:(TTLauncherView*)launcher didSelectItem:(TTLauncherItem*)item {
-    [[TTNavigator navigator] openURLAction:[TTURLAction actionWithURLPath:item.URL]];
+    [[TTNavigator navigator] openURLAction:[[TTURLAction actionWithURLPath:item.URL] applyAnimated:YES]];
 }
 
 - (void)launcherViewDidBeginEditing:(TTLauncherView*)launcher {
