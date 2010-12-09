@@ -45,7 +45,7 @@ x Update to latest Three20
     * Make pager dots actually visible.
     * Nuke PhotoSource madness.
         * Don't forget TTPhoto junk in CinetiMovie
-    * Display first page on startup
+    x Display first page on startup
 
 * Better display when a theatre has no movies
 

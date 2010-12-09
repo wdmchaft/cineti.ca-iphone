@@ -82,12 +82,14 @@
 - (void)moviesRequest:(CinetiMoviesRequest *)request didSucceedWithMovies:(NSArray *)movies {
 	NSLog( @"Successfully retrieved %d movies", [movies count] );
     
+    _launcher.pages = nil;
     for (CinetiMovie *movie in movies)
     {
         NSLog(@"Got movie %@, URL %@", movie.title, movie.movieid);
         [[CinetiMovieManager sharedInstance] addMovie:movie withKey:movie.movieid];
         [_launcher addItem:[[[TTLauncherItem alloc] initWithTitle:movie.title image:movie.posterThumbURL URL:movie.movieid] autorelease] animated:NO];
     }
+    [_launcher setCurrentPageIndex:0];
 	[request autorelease];
 }
 
