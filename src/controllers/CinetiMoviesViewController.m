@@ -9,7 +9,6 @@
 #import "CinetiMoviesViewController.h"
 #import "CinetiMoviesRequest.h"
 #import "CinetiMovieManager.h"
-#import "CinetiPhotoSource.h"
 #import "Three20/Three20.h"
 
 @implementation TTLauncherView (DisableEditing) 

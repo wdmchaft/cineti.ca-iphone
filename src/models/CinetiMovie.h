@@ -8,14 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "CinetiJSONObject.h"
-#import "Three20/Three20.h"
 
-
-@interface CinetiMovie : CinetiJSONObject <TTPhoto> {
-    // Members needed for TTPhoto attributes
-    id <TTPhotoSource> photoSource;
-    CGSize size;
-    NSInteger index;
+@interface CinetiMovie : CinetiJSONObject {
 }
 
 + movieFromRawMovie:(NSDictionary *)rawMovie;

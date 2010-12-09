@@ -31,6 +31,7 @@ x Update to latest Three20
     * Link from main view
     * Fix extra space between showtime rows
     * Load movie details if not in CinetiMovieManager
+    * Put title in navigation bar
 
 * Fix main thumbnail view
     * Create custom view to display thumbnails in proper aspect ratio - based on TTLauncher?
@@ -40,12 +41,12 @@ x Update to latest Three20
     x Prevent edit mode from showing up.
     x Display first page on startup
     x Deal with poster-less movies
-    * Ensure posters don't get cut off at bottom
-        * Hide title bar?
-    * Animate transition to per-movie display
+    x Nuke PhotoSource madness.
+    * Ensure posters don't get cut off at bottom - hide title bar
     * Make pager dots actually visible.
-    * Nuke PhotoSource madness.
-        * Don't forget TTPhoto junk in CinetiMovie
+    * Add top margin
+    * Put white margin around posters (enough space?)
+    * Animate transition to per-movie display
 
 * Better display when a theatre has no movies
 

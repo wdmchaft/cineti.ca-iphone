@@ -42,7 +42,6 @@
 		6E9A3FD111A5D6F900BF0CC5 /* CinetiJSONRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4393661180B0A8008D4114 /* CinetiJSONRequest.m */; };
 		6E9A3FD411A5D6F900BF0CC5 /* CinetiMoviesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4393131180A670008D4114 /* CinetiMoviesRequest.m */; };
 		6E9A3FD611A5D6F900BF0CC5 /* CinetiMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4393061180A0E3008D4114 /* CinetiMovie.m */; };
-		6E9A3FD811A5D6F900BF0CC5 /* CinetiPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E01311A3B2A300F3847F /* CinetiPhotoSource.m */; };
 		6E9A3FEC11A5DA3D00BF0CC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		6E9A3FED11A5DA4600BF0CC5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4393401180B018008D4114 /* QuartzCore.framework */; };
 		6E9A3FEE11A5DA5200BF0CC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -50,7 +49,6 @@
 		6E9A403E11A5E4AB00BF0CC5 /* CinetiMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D75C117F8908002B0C96 /* CinetiMoviesViewController.m */; };
 		6E9A404211A5E4FA00BF0CC5 /* CinetiTheatresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF7D78E117F8BDA002B0C96 /* CinetiTheatresViewController.m */; };
 		6EB5DF3C11A2764700F3847F /* LogicTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5DF3B11A2764700F3847F /* LogicTestCase.m */; };
-		6EB5E01411A3B2A300F3847F /* CinetiPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E01311A3B2A300F3847F /* CinetiPhotoSource.m */; };
 		6EC960531270DE3E000A59FB /* CinetiMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC960521270DE3E000A59FB /* CinetiMovieViewController.m */; };
 		6EC9609C12763F14000A59FB /* CinetiMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC960521270DE3E000A59FB /* CinetiMovieViewController.m */; };
 		6EC9611E1277D0D2000A59FB /* CinetiMovieDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC9611D1277D0D2000A59FB /* CinetiMovieDataSource.m */; };
@@ -492,8 +490,6 @@
 		6E9FB67411864104004E6274 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB5DF3A11A2764700F3847F /* LogicTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicTestCase.h; sourceTree = "<group>"; };
 		6EB5DF3B11A2764700F3847F /* LogicTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogicTestCase.m; sourceTree = "<group>"; };
-		6EB5E01211A3B2A300F3847F /* CinetiPhotoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiPhotoSource.h; sourceTree = "<group>"; };
-		6EB5E01311A3B2A300F3847F /* CinetiPhotoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiPhotoSource.m; sourceTree = "<group>"; };
 		6EC960511270DE3E000A59FB /* CinetiMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiMovieViewController.h; sourceTree = "<group>"; };
 		6EC960521270DE3E000A59FB /* CinetiMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiMovieViewController.m; sourceTree = "<group>"; };
 		6EC9611C1277D0D2000A59FB /* CinetiMovieDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiMovieDataSource.h; sourceTree = "<group>"; };
@@ -772,8 +768,6 @@
 				6EC9611D1277D0D2000A59FB /* CinetiMovieDataSource.m */,
 				6EC96124127810AF000A59FB /* CinetiMovieModel.h */,
 				6EC96125127810AF000A59FB /* CinetiMovieModel.m */,
-				6EB5E01211A3B2A300F3847F /* CinetiPhotoSource.h */,
-				6EB5E01311A3B2A300F3847F /* CinetiPhotoSource.m */,
 				6E361F8E11AE246E00EE956A /* CinetiTheatresDataSource.h */,
 				6E361F8F11AE246E00EE956A /* CinetiTheatresDataSource.m */,
 				6E361FB011AE26EA00EE956A /* CinetiTheatresModel.h */,
@@ -1360,7 +1354,6 @@
 				DB43930A1180A23D008D4114 /* CinetiJSONObject.m in Sources */,
 				DB4393671180B0A8008D4114 /* CinetiJSONRequest.m in Sources */,
 				DB4393141180A670008D4114 /* CinetiMoviesRequest.m in Sources */,
-				6EB5E01411A3B2A300F3847F /* CinetiPhotoSource.m in Sources */,
 				6E361F9011AE246E00EE956A /* CinetiTheatresDataSource.m in Sources */,
 				6E361FB211AE26EA00EE956A /* CinetiTheatresModel.m in Sources */,
 				6E3621A211B078CC00EE956A /* CinetiTabBarController.m in Sources */,
@@ -1397,7 +1390,6 @@
 				6E9A3FCE11A5D6F900BF0CC5 /* CinetiJSONObject.m in Sources */,
 				6E9A3FD111A5D6F900BF0CC5 /* CinetiJSONRequest.m in Sources */,
 				6E9A3FD411A5D6F900BF0CC5 /* CinetiMoviesRequest.m in Sources */,
-				6E9A3FD811A5D6F900BF0CC5 /* CinetiPhotoSource.m in Sources */,
 				6EB5DF3C11A2764700F3847F /* LogicTestCase.m in Sources */,
 				6EC9611F1277D0D2000A59FB /* CinetiMovieDataSource.m in Sources */,
 				6EC96127127810AF000A59FB /* CinetiMovieModel.m in Sources */,

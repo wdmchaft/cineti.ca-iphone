@@ -35,28 +35,6 @@
     NVPassStrEq(movie.title, @"Movie Title Goes Here");
     NVPassStrEq(movie.posterURL, @"http://example.com/poster_thumb.jpg");
     NVPassStrEq(movie.posterThumbURL, @"http://example.com/poster_thumb.jpg");
-
-    CinetiPhotoSource *photoSource = [[[CinetiPhotoSource alloc] init] autorelease];
-    NVPassEq([photoSource numberOfPhotos], 0);
-    NVPassEq([photoSource maxPhotoIndex], -1);
-    
-    CinetiMovie *emptyMovie = [[[CinetiMovie alloc] init] autorelease];
-    [photoSource addMovie:emptyMovie];
-    NVPassEq([photoSource numberOfPhotos], 0);
-    NVPassEq([photoSource maxPhotoIndex], -1);
-    
-    [photoSource addMovie:movie];
-    NVPassEq([photoSource numberOfPhotos], 1);
-    NVPassEq([photoSource maxPhotoIndex], 0);
-    
-    NVPassEq([movie photoSource], photoSource);
-    NVPassIntEq([movie index], 0);
-    
-    NVPassStrEq([movie URLForVersion:TTPhotoVersionThumbnail], @"http://example.com/poster_thumb.jpg");
-    NVPassStrEq([movie URLForVersion:TTPhotoVersionSmall], @"http://example.com/poster_thumb.jpg");
-    NVPassStrEq([movie URLForVersion:TTPhotoVersionMedium], @"http://example.com/poster.jpg");
-    NVPassStrEq([movie URLForVersion:TTPhotoVersionLarge], @"http://example.com/poster.jpg");
-
 }
 
 @end
