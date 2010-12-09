@@ -34,7 +34,17 @@ x Update to latest Three20
 
 * Fix main thumbnail view
     * Create custom view to display thumbnails in proper aspect ratio - based on TTLauncher?
+        * Display a loading screen while fetching movie list
+        x Show movie thumbnails in launcher after retrieving details
+        * Link to per-movie display
+    * Prevent edit mode from showing up.
+    * Ensure posters don't get cut off at bottom
+        * Hide title bar?
+    * Deal with poster-less movies
     * Animate transition to per-movie display
+    * Make pager dots actually visible.
+    * Nuke PhotoSource madness.
+        * Don't forget TTPhoto junk in CinetiMovie
 
 * Better display when a theatre has no movies
 

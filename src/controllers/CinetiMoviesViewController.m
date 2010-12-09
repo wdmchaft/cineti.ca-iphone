@@ -30,63 +30,46 @@
     return [self initWithNibName:nil bundle:nil];
 }
 
-- (void)viewDidLoad
-{
-    NSLog(@"CinetiMoviesViewController: viewDidLoad");
-    [super viewDidLoad];
-    self.photoSource = [[[CinetiPhotoSource alloc] init] autorelease];
-    self.navigationBarStyle = UIBarStyleDefault;
-    self.navigationBarTintColor = [UIColor redColor];
+- (void)dealloc {
+    [super dealloc];
+}
 
+#pragma mark UIViewController
+
+- (void)loadView
+{
+    NSLog(@"CinetiMoviesViewController: loadView");
+    [super loadView];
+    
+    _launcher = [[TTLauncherView alloc] initWithFrame:self.view.bounds];
+    _launcher.delegate = self;
+    _launcher.columnCount = 3;
+    [self.view addSubview:_launcher];
+    
     [[CinetiMoviesRequest moviesRequestWithDelegate:self] retain];
-}
-
-// TTThumbsViewController doesn't let you set the nav bar to translucent using 
-// its own properties (set in viewDidLoad) unless you set the navigationBarStyle 
-// to UIBarStyleBlackTranslucent; instead, if you want a translucent coloured 
-// nav bar, you have to set it yourself here.
-/*
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    UINavigationBar* navBar = self.navigationController.navigationBar;
-    navBar.tintColor = [UIColor redColor];
-    navBar.translucent = YES;
-}
-/**/
-
-// If the navigation bar is set to non-translucent, we need to adjust the offset 
-// of the table layout; TTThumbsViewController assumes that the navigation bar 
-// is translucent, and so manually ensures that the table view starts out below it.
-- (void)updateTableLayout
-{
-    self.tableView.contentInset = UIEdgeInsetsMake(4, 0, 0, 0); 
-    self.tableView.scrollIndicatorInsets = UIEdgeInsetsZero; 
-}
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
-- (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
 }
 
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
 }
 
+#pragma mark TTLauncherViewDelegate
 
-- (void)dealloc {
-    [super dealloc];
+- (void)launcherView:(TTLauncherView*)launcher didSelectItem:(TTLauncherItem*)item {
 }
+
+- (void)launcherViewDidBeginEditing:(TTLauncherView*)launcher {
+    [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc]
+                                                 initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                 target:_launcher action:@selector(endEditing)] autorelease] animated:YES];
+}
+
+- (void)launcherViewDidEndEditing:(TTLauncherView*)launcher {
+    [self.navigationItem setRightBarButtonItem:nil animated:YES];
+}
+
+
+#pragma mark CinetiMoviesRequestDelegate
 
 - (void)moviesRequest:(CinetiMoviesRequest *)request didSucceedWithMovies:(NSArray *)movies {
 	NSLog( @"Successfully retrieved %d movies", [movies count] );
@@ -95,8 +78,7 @@
     {
         NSLog(@"Got movie %@", movie.title);
         [[CinetiMovieManager sharedInstance] addMovie:movie withKey:movie.movieid];
-        // FIXME: Redo all this photosource business
-        [(CinetiPhotoSource *)self.photoSource addMovie:movie];
+        [_launcher addItem:[[[TTLauncherItem alloc] initWithTitle:movie.title image:movie.posterThumbURL URL:movie.URLValue] autorelease] animated:NO];
     }
 	[request autorelease];
 }

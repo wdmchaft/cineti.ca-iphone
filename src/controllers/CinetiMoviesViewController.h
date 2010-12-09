@@ -9,8 +9,8 @@
 #import "CinetiMoviesRequestDelegate.h"
 #import "Three20/Three20.h"
 
-@interface CinetiMoviesViewController : TTThumbsViewController <CinetiMoviesRequestDelegate> {
-
+@interface CinetiMoviesViewController : TTViewController <CinetiMoviesRequestDelegate, TTLauncherViewDelegate> {
+    TTLauncherView *_launcher;
 }
 
 @end
