@@ -55,7 +55,7 @@ x Update to latest Three20
 * Replace "Url" with "URL" consistently
 
 * Figure out why some movies don't have posters in per-theatre view.
-    * If unfixable, figure out where to put no-thumbnail movies in main movie list
+    x If unfixable, figure out where to put no-thumbnail movies in main movie list
 
 * Fix thumbnail URL mangling in CinetiMovie.m
 

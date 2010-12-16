@@ -12,6 +12,7 @@
 #import "CinetiTheatresViewController.h"
 #import "CinetiTheatreViewController.h"
 #import "CinetiTabBarController.h"
+#import "CinetiDefaultStylesheet.h"
 
 @implementation CinetiAppDelegate
 
@@ -23,6 +24,8 @@
     TTNavigator *navigator = [TTNavigator navigator];
     navigator.persistenceMode = TTNavigatorPersistenceModeAll;
     navigator.window = [[[UIWindow alloc] initWithFrame:TTScreenBounds()] autorelease];
+    
+    [TTStyleSheet setGlobalStyleSheet:[[[CinetiDefaultStyleSheet alloc]	init] autorelease]];
     
     TTURLMap *map = navigator.URLMap;
     

@@ -20,6 +20,8 @@
 		320CC833B8AF0ACFD35E6225 /* libThree20Style.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320CC833B8AF0ACFD35E6224 /* libThree20Style.a */; };
 		320D7DCCE32703ACAB9A45E5 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320D7DCCE32703ACAB9A45E4 /* libThree20.a */; };
 		320F2C48872C2E2C4DF86205 /* libThree20UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320F2C48872C2E2C4DF86204 /* libThree20UI.a */; };
+		6E16BDA612BAC2E300A78CE3 /* CinetiDefaultStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16BDA512BAC2E300A78CE3 /* CinetiDefaultStylesheet.m */; };
+		6E16BDA712BAC2E300A78CE3 /* CinetiDefaultStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16BDA512BAC2E300A78CE3 /* CinetiDefaultStylesheet.m */; };
 		6E361F9011AE246E00EE956A /* CinetiTheatresDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E361F8F11AE246E00EE956A /* CinetiTheatresDataSource.m */; };
 		6E361FB211AE26EA00EE956A /* CinetiTheatresModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E361FB111AE26EA00EE956A /* CinetiTheatresModel.m */; };
 		6E361FBB11AE283D00EE956A /* CinetiTheatresDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E361F8F11AE246E00EE956A /* CinetiTheatresDataSource.m */; };
@@ -470,6 +472,8 @@
 		320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Style.xcodeproj; path = "third-party/three20/src/Three20Style/Three20Style.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = "third-party/three20/src/Three20/Three20.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = "third-party/three20/src/Three20UI/Three20UI.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		6E16BDA412BAC2E300A78CE3 /* CinetiDefaultStylesheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiDefaultStylesheet.h; sourceTree = "<group>"; };
+		6E16BDA512BAC2E300A78CE3 /* CinetiDefaultStylesheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiDefaultStylesheet.m; sourceTree = "<group>"; };
 		6E361F8E11AE246E00EE956A /* CinetiTheatresDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiTheatresDataSource.h; sourceTree = "<group>"; };
 		6E361F8F11AE246E00EE956A /* CinetiTheatresDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinetiTheatresDataSource.m; sourceTree = "<group>"; };
 		6E361FB011AE26EA00EE956A /* CinetiTheatresModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinetiTheatresModel.h; sourceTree = "<group>"; };
@@ -615,6 +619,8 @@
 				29B97316FDCFA39411CA2CEA /* main.m */,
 				1D3623240D0F684500981E51 /* CinetiAppDelegate.h */,
 				1D3623250D0F684500981E51 /* CinetiAppDelegate.m */,
+				6E16BDA412BAC2E300A78CE3 /* CinetiDefaultStylesheet.h */,
+				6E16BDA512BAC2E300A78CE3 /* CinetiDefaultStylesheet.m */,
 			);
 			name = Startup;
 			path = src/startup;
@@ -1366,6 +1372,7 @@
 				6EC960531270DE3E000A59FB /* CinetiMovieViewController.m in Sources */,
 				6EC9611E1277D0D2000A59FB /* CinetiMovieDataSource.m in Sources */,
 				6EC96126127810AF000A59FB /* CinetiMovieModel.m in Sources */,
+				6E16BDA712BAC2E300A78CE3 /* CinetiDefaultStylesheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1393,6 +1400,7 @@
 				6EB5DF3C11A2764700F3847F /* LogicTestCase.m in Sources */,
 				6EC9611F1277D0D2000A59FB /* CinetiMovieDataSource.m in Sources */,
 				6EC96127127810AF000A59FB /* CinetiMovieModel.m in Sources */,
+				6E16BDA612BAC2E300A78CE3 /* CinetiDefaultStylesheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
