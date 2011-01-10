@@ -16,33 +16,33 @@
 @implementation CinetiTheatreModel
 
 @synthesize movies = _movies;
-@synthesize theatreUrl = _theatreUrl;
+@synthesize theatreURL = _theatreURL;
 
 - (id) initWithTheatreURL:(NSString *)url
 {
     if (self = [super init])
     {
-        self.theatreUrl = [NSString stringWithString:url];
+        self.theatreURL = [NSString stringWithString:url];
         self.movies = nil;
     }
-    NSLog(@"CinetiTheatreModel: initWithTheatreURL(%@), self=%p", self.theatreUrl, self);
+    NSLog(@"CinetiTheatreModel: initWithTheatreURL(%@), self=%p", self.theatreURL, self);
     return self;
 }
 
 - (void) dealloc
 {
     NSLog(@"CinetiTheatreModel: dealloc");
-    self.theatreUrl = nil;
+    self.theatreURL = nil;
     self.movies = nil;
     [super dealloc];
 }
 
 - (void)load:(TTURLRequestCachePolicy)cachePolicy more:(BOOL)more
 {
-    NSLog(@"CinetiTheatreModel: load %@, self=%p", self.theatreUrl, self);
+    NSLog(@"CinetiTheatreModel: load %@, self=%p", self.theatreURL, self);
     
     if (!self.isLoading) {
-        TTURLRequest *request = [TTURLRequest requestWithURL:self.theatreUrl delegate:self];
+        TTURLRequest *request = [TTURLRequest requestWithURL:self.theatreURL delegate:self];
         request.cachePolicy = cachePolicy;
         
         id<TTURLResponse> response = [[TTURLDataResponse alloc] init];

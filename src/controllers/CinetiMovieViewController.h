@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Three20/Three20.h>
 
-#define kMovieBaseUrl @"http://api.cineti.ca/movie/"
+#define kMovieBaseURL @"http://api.cineti.ca/movie/"
 
 @interface CinetiMovieViewController : TTTableViewController {
 

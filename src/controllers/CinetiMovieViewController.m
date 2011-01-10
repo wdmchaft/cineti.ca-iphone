@@ -21,9 +21,9 @@
         self.variableHeightRows = YES;
         
         // The id passed in is just the base number, not the full URL
-        NSString *movieUrl = [NSString stringWithFormat:@"%@%@.json", kMovieBaseUrl, movieid];
+        NSString *movieURL = [NSString stringWithFormat:@"%@%@.json", kMovieBaseURL, movieid];
         
-        self.dataSource = [[[CinetiMovieDataSource alloc] initWithMovieURL:movieUrl] autorelease];
+        self.dataSource = [[[CinetiMovieDataSource alloc] initWithMovieURL:movieURL] autorelease];
     }
     
     return self;

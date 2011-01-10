@@ -9,6 +9,8 @@ x Assign Cineti{Movie,Theatre}DataSource's model in its initializer, not in view
 
 x iPhone status bar goes black in movies list.
 
+x Replace "Url" with "URL" consistently
+
 x Update to latest Three20
     x Fix library includes
     x Tab bar disappeared?
@@ -51,8 +53,6 @@ x Update to latest Three20
 * Better display when a theatre has no movies
 
 * Word wrap showtimes
-
-* Replace "Url" with "URL" consistently
 
 * Figure out why some movies don't have posters in per-theatre view.
     x If unfixable, figure out where to put no-thumbnail movies in main movie list

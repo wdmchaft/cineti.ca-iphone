@@ -18,7 +18,7 @@
     if (self = [super init]) {
         self.variableHeightRows = YES;
         
-        NSString *theatreURL = [NSString stringWithFormat:@"%@%@.json", kTheatreBaseUrl, theatreName];
+        NSString *theatreURL = [NSString stringWithFormat:@"%@%@.json", kTheatreBaseURL, theatreName];
         self.dataSource = [[[CinetiTheatreDataSource alloc] initWithTheatreURL:theatreURL] autorelease];
     }
     

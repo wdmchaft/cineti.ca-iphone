@@ -10,13 +10,13 @@
 #import "Three20/Three20.h"
 
 @interface CinetiTheatreModel : TTURLRequestModel {
-    NSString *_theatreUrl;
+    NSString *_theatreURL;
     NSMutableArray *_movies;
 }
 
 - (id) initWithTheatreURL:(NSString *)url;
 
-@property (nonatomic, retain) NSString *theatreUrl;
+@property (nonatomic, retain) NSString *theatreURL;
 @property (nonatomic, retain) NSMutableArray *movies;
 
 @end
