@@ -44,7 +44,7 @@ x Update to latest Three20
     x Nuke PhotoSource madness.
     x Ensure posters don't get cut off at bottom - hide title bar
     x Make pager dots actually visible.
-    * Add top margin
+    x Add top margin
     * Put white margin around posters (enough space?)
     * Animate transition to per-movie display
 
